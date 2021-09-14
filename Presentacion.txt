@@ -1,10 +1,22 @@
-EVIDENCIA
-
 1. NOMBRE DEL PROYECTO:
 
 1.1. Especificación de requerimientos.
-	Definición general del proyecto de software.
-		Qué, para qué y quién.
+
+Definición general del proyecto.
+Se propone analizar, diseñar y construir una aplicación software que 
+permita controlar las ventas físicas y virtuales de una empresa de 
+manufactura y hacerles el correspondiente seguimiento. 
+
+Con el objetivo de que cada una de las personas interesadas en el 
+proceso de venta pueda tener conocimiento del estado de la misma
+y que los clientes puedan realizar compras desde la comodidad de su
+casa o trabajo.
+
+Está dirigido a clientes internos y externos de la compañia. La página
+puede ser utilizada por cualquier persona con conocimientos básicos de
+navegación en internet. 
+
+
 		Propósitos
 		Objetivos
 	
@@ -23,7 +35,7 @@ EVIDENCIA
 		Descripción jerárquica.
 		Diagrama de módulos.
 		Descripción individual de los módulos (para que existe el módulo).
-1.2. 
+ 
 
 2. COLABORADORES:
 
