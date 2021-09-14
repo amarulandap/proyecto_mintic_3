@@ -60,7 +60,5 @@ Persistencia usando bases de datos (MySQL - Workbench).
 HTML5, CSS3, Javascript, Typescript
 ReactJs, NodeJs, Stack MERN.
 
-shsjdfhsdfhsdfoi
-sdgsgs
 
 
