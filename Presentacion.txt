@@ -21,33 +21,69 @@ EVIDENCIA
 	
 	Arquitectura del sistema.
 		Descripción jerárquica.
+
+Estan organizados en espacios de nombres donde parte desde el repositorio hasta la
+linea de comandos a usar de manera remota mediante una cadena de texto que integra 
+las funcionalidades del software llevado a producción como ultimo recurso.
+
 		Diagrama de módulos.
-		Descripción individual de los módulos (para que existe el módulo).
+Repositorio/Directorio.git/Directorio de trabajo/índice/Commit/Branch/Head/
+Comandos(init/config/help/status/add/branch/checkout/clone/commit/diff/grep/
+log/merge/mv/pull/push/rebase/reset/rm).
+
+	
+	        Descripción individual de los módulos (para que existe el módulo).
+
+Repositorio:
+
+Descripción general y propósito:
+
+Es un conjunto de archivos, directorios, registros, cambios (commits),
+ y encabezados (heads).
+Archivar la documentación y procesos en la nube.
+
+Responsabilidad y restricciones:
+
+Crear ramas para los distintos administradores y proporcionar el enlace via remota
+integrando cambios que se configuran en ramas posteriores y directorios dentro del repositorio.
+
+Los desarrolladores secundarios no pueden llevar a cabo configuraciones y ajustes sobre la rama 
+principal.
+
+Dependencias:
+
+Conección remota con el equipo del desarrollador y el repositorio final en Github.
+
+Implementación:
+
+Se encuentra en los repositorios individuales de los equipos de los desarrolladores y en ramas 
+release_"nombre_del_desarrollador"; todo ello mediante los comandos branch, commit, merge.
+
+
+
+
+
 1.2. 
 
 2. COLABORADORES:
 
-NOMBRE: Andrés Felipe Marulanda.
+NOMBRE: Cristian Humberto Morales Espinosa.
 
-PROFESIÓN: Técnico en electrónica y desarrollador web.
+PROFESIÓN: Técnico en sistemas y tecnologo en electricidad Industrial.
 
 COMPETENCIAS: 
 
-1.	Electrónica Básica:
-Análisis y diseño de circuitos eléctricos y electrónicos.
-Análisis de circuitos digitales.
-Programación de microcontroladores y microprocesadores.
-Programación básica en C++.
 
-2.	Programación en Python:
+1.	Programación en Python:
 Algoritmia.
 Programación orientada a objetos.
 Pilas y Colas.
 Lectura y escritura en archivos CSV.
 Paquete Numpy.
 Paquete Pandas.
+Pseint.
 
-3.	Programación en Java:
+2.	Programación en Java:
 Algoritmia.
 Diagramas UML.
 Abstracción, herencia, polimorfismo y encapsulamiento.
@@ -56,9 +92,11 @@ Interfaces gráficas usando swing.
 Pruebas unitarias básicas.
 Persistencia usando bases de datos (MySQL - Workbench).
 
-4.	Diseño de páginas web usando diferentes tecnologías
-HTML5, CSS3, Javascript, Typescript
+3.	Diseño de páginas web usando diferentes tecnologías
+HTML5, CSS3, Javascript,
 ReactJs, NodeJs, Stack MERN.
 
-
+4.     Manejo de interfaz Git y repositorios en Github:
+Conocimientos basicos en las funcionalidades de Git y la compilación
+con la nube de Github.
 
