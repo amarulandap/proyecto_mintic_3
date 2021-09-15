@@ -101,33 +101,3 @@ ReactJs, NodeJs, Stack MERN.
 Conocimientos basicos en las funcionalidades de Git y la compilación
 con la nube de Github.
 
-NOMBRE: Francy Milena Corredor Ramírez
-
-PROFESIÓN: Ingeniera Industrial, Desarrollador web.
-
-COMPETENCIAS: 
-
-1.	Ingeniería Industrial:
-Formulación y evaluación de proyectos.
-Estructuración de Sistema de Gestión de Calidad.
-Estructuración de Sistema de Gestión de la Seguridad y Salud en el trabajo.
-Procesos administrativos y de recursos humanos.
-
-2.	Programación en Python:
-Algoritmia.
-Programación orientada a objetos.
-Pilas y Colas.
-Lectura y escritura en archivos CSV.
-Paquete Numpy.
-Paquete Pandas.
-
-3.	Programación en Java:
-Algoritmia.
-Diagramas UML.
-Abstracción, herencia, polimorfismo y encapsulamiento.
-Colecciones.
-Interfaces gráficas usando swing.
-Pruebas unitarias básicas.
-Persistencia usando bases de datos (MySQL - Workbench).
-
-
