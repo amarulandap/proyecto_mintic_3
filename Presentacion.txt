@@ -52,7 +52,7 @@ principal.
 
 Dependencias:
 
-Conección remota con el equipo del desarrollador y el repositorio final en Github.
+Conexión remota con el equipo del desarrollador y el repositorio final en Github.
 
 Implementación:
 
