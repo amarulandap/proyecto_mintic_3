@@ -1,24 +1,57 @@
-EVIDENCIA
+1. INFORMACIÓN BÁSICA DEL PROYECTO
+ 	 	 	 	 	 	 
+UNIVERSIDAD DE ANTIOQUIA 
+	 	 	 	 
+NOMBRE DEL PROYECTO	Página web empresa de manufactura Textiles La 15
+PROGRAMA DE FORMACIÓN	Misión Tic 2022
+TIEMPO DE DURACIÓN 	Inicio:	13/09/2021	Fin:	23/10/2021
+ 	 	 				 
+EQUIPO DE DESARROLLO	Christian Morales
+ 		 	Claudia Ospina
+ 		 	Ricardo Restrepo
+ 		 	Francy Corredor
+ 	 	 	Andres Marulanda
 
-1. NOMBRE DEL PROYECTO:
 
-1.1. Especificación de requerimientos.
-	Definición general del proyecto de software.
-		Qué, para qué y quién.
-		Propósitos
-		Objetivos
+2. DEFINICIÓN GENERAL DEL PROYECTO.
+
+Se propone analizar, diseñar y construir una aplicación software que 
+permita controlar las ventas físicas y virtuales de una empresa de 
+manufactura y hacerles el correspondiente seguimiento. 
+
+Con el objetivo de que cada una de las personas interesadas en el 
+proceso de venta pueda tener conocimiento del estado de la misma
+y que los clientes puedan realizar compras desde la comodidad de su
+casa o trabajo.
+
+Está dirigido a clientes internos y externos de la compañía. La página
+puede ser utilizada por cualquier persona con conocimientos básicos de
+navegación en internet. 
+
+Con la página web se busca:
+1.	Que tanto los clientes internos como externos puedan tener acceso a información de su interés y necesidad desde cualquier lugar.
+2.	Que los clientes puedan buscar de manera fácil y rápida toda la información relacionada con los productos que son de su interés.
+3.	A la hora de realizar una compra, el cliente disponga de varias alternativas de pago que faciliten su proceso.
+4.	Dar a los clientes y encargados del proceso de venta, la posibilidad de saber en qué estado se encuentra la misma y hacerle seguimiento desde la creación del 
+	pedido hasta el momento de la entrega.
+5.	Que cada una de las compras realizadas por el cliente sea asignada a un vendedor en particular quien será el encargado de hacerle seguimiento.
+6.	Cada uno de los empleados de la empresa tendrá acceso a la información necesaria para la realización de su labor.
+7.	Garantizar la seguridad e integridad de la información restringiendo el acceso de los clientes y empleados según el rol que cada uno tenga en su archivo de registro.
 	
-	Especificación de los requerimientos del proyecto.
+
+Especificación de los requerimientos del proyecto.
 		Requisitos generales.
 		Requisitos funcionales.
 		Información de la autoría.
 		Alcances y limitaciones.
 	
-	Procedimientos de instalación y prueba.
+
+Procedimientos de instalación y prueba.
 		Herramientas utilizadas.
 		Seguimiento detallado a grandes rasgos.
 		Instalación.
 	
+
 Arquitectura del sistema.
 		Descripción jerárquica.
 
@@ -60,8 +93,7 @@ Se encuentra en los repositorios individuales de los equipos de los desarrollado
 release_"nombre_del_desarrollador"; todo ello mediante los comandos branch, commit, merge.
 
 
-
-1.2. 
+ 
 
 2. COLABORADORES:
 
@@ -99,6 +131,7 @@ HTML5, CSS3, Javascript, Typescript
 ReactJs, NodeJs, Stack MERN.
 
 
+
 NOMBRE: Francy Milena Corredor Ramírez
 
 
@@ -127,7 +160,8 @@ Abstracción, herencia, polimorfismo y encapsulamiento.
 Colecciones.
 Interfaces gráficas usando swing.
 Pruebas unitarias básicas.
-Persistencia usando bases de datos (MySQL - Workbench).
+Persistencia usando bases de datos (MySQL - Workbench)
+
 
 NOMBRE: Cristian Humberto Morales Espinosa.
 
