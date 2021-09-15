@@ -67,6 +67,68 @@ release_"nombre_del_desarrollador"; todo ello mediante los comandos branch, comm
 
 2. COLABORADORES:
 
+NOMBRE: Andrés Felipe Marulanda.
+
+PROFESIÓN: Técnico en electrónica y desarrollador web.
+
+COMPETENCIAS: 
+
+1.	Electrónica Básica:
+Análisis y diseño de circuitos eléctricos y electrónicos.
+Análisis de circuitos digitales.
+Programación de microcontroladores y microprocesadores.
+Programación básica en C++.
+
+2.	Programación en Python:
+Algoritmia.
+Programación orientada a objetos.
+Pilas y Colas.
+Lectura y escritura en archivos CSV.
+Paquete Numpy.
+Paquete Pandas.
+
+3.	Programación en Java:
+Algoritmia.
+Diagramas UML.
+Abstracción, herencia, polimorfismo y encapsulamiento.
+Colecciones.
+Interfaces gráficas usando swing.
+Pruebas unitarias básicas.
+Persistencia usando bases de datos (MySQL - Workbench).
+
+4.	Diseño de páginas web usando diferentes tecnologías
+HTML5, CSS3, Javascript, Typescript
+ReactJs, NodeJs, Stack MERN.
+
+NOMBRE: Francy Milena Corredor Ramírez
+
+PROFESIÓN: Ingeniera Industrial, Desarrollador web.
+
+COMPETENCIAS: 
+
+1.	Ingeniería Industrial:
+Formulación y evaluación de proyectos.
+Estructuración de Sistema de Gestión de Calidad.
+Estructuración de Sistema de Gestión de la Seguridad y Salud en el trabajo.
+Procesos administrativos y de recursos humanos.
+
+2.	Programación en Python:
+Algoritmia.
+Programación orientada a objetos.
+Pilas y Colas.
+Lectura y escritura en archivos CSV.
+Paquete Numpy.
+Paquete Pandas.
+
+3.	Programación en Java:
+Algoritmia.
+Diagramas UML.
+Abstracción, herencia, polimorfismo y encapsulamiento.
+Colecciones.
+Interfaces gráficas usando swing.
+Pruebas unitarias básicas.
+Persistencia usando bases de datos (MySQL - Workbench).
+
 NOMBRE: Cristian Humberto Morales Espinosa.
 
 PROFESIÓN: Técnico en sistemas y tecnologo en electricidad Industrial.
