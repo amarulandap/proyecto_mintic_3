@@ -82,6 +82,7 @@ solicitar al tutor un encuentro sincrónico por medio de la plataforma; dicho en
 		
 
 		Instalación.
+Se va a desplegar a traves de Heroku
 
 	
 
