@@ -47,9 +47,42 @@ Especificación de los requerimientos del proyecto.
 	
 
 Procedimientos de instalación y prueba.
+
 		Herramientas utilizadas.
+
+Para lograr llevar a cabo el proyecto es necesario contar con un grupo de herramientas que permitirán organizar, planear, estructurar y desarrollar la aplicación web.  
+
+● IDE (interface development environment).Se utilizará Visual Studio Code para desarrollar frameworks como ReactJs y NodeJs
+
+● Git. Es un software de control de versiones de código distribuido, que se instala en la máquina local del desarrollador. 
+
+● Github (repositorio). Es una carpeta para alojar proyectos utilizando el sistema de control de versiones Git. 
+Se utiliza principalmente para la creación de código fuente de programas de ordenador.
+
+● Trello (administrador de proyecto). Es un software de administración de proyectos que permite llevar el registro de todas las metas determinadas para cada uno de los sprints, 
+así como las actividades de su responsable.   
+
+● Heroku. Es una plataforma en la nube que permite a las empresas construir, entregar y supervisar aplicaciones para luego poder alojarlas en la nube y posibilitar el acceso a 
+los usuarios de las aplicaciones que se construyen.
+
+● Stack tecnológico. La plataforma tecnológica expuesta en el curso Desarrollo de aplicaciones web es Heroku, o la que se crea más pertinente para los despliegues.
+		
+
 		Seguimiento detallado a grandes rasgos.
+
+El desarrollo de aplicaciones web tendrá como base un proyecto dividido en cinco (5) sprints y deberá ser construido en un equipo de cinco (5) integrantes. Junto con los integrantes 
+del equipo en el que te encuentras, deberás establecer un cronograma de actividades para sincronizar de manera ágil el trabajo a llevar a cabo.
+
+Cada grupo tendrá asignado un tutor que le dará soporte dependiendo de las necesidades que surjan en la ejecución del proyecto. Además, el equipo debe diligenciar diariamente un 
+formulario que encontrará en la plataforma, en el cual se deberán registrar los avances, las dificultades y el cumplimiento de compromisos de cada uno de los integrantes. 
+
+El tutor registrará el seguimiento de los avances que haga el equipo, e igualmente las dificultades y el cumplimiento de los compromisos de cada uno de sus miembros según lo 
+registrado en los Dailys y en el administrador de proyectos (Trello). Si dentro de ese seguimiento se tiene alguna consulta o se requiere aclarar dudas e inquietudes, se podrá 
+solicitar al tutor un encuentro sincrónico por medio de la plataforma; dicho encuentro quedará grabado en plataforma para que accedas a su contenido cada vez que lo necesites. 
+		
+
 		Instalación.
+
 	
 
 Arquitectura del sistema.
@@ -197,5 +230,42 @@ ReactJs, NodeJs, Stack MERN.
 Conocimientos basicos en las funcionalidades de Git y la compilación
 con la nube de Github.
 
+NOMBRE: Ricardo Restrepo Angel
+
+PROFESIÓN: Estudiante de Ingenieria Electronica
+
+COMPETENCIAS: 
+
+1.	Ingenieria Electronica
+Conocimientos en redes, manejo de switches y enrutadores, 
+Programación de aplicaciones móviles, 
+Programación C, C++, PHP, base de datos con SQL.
+
+1.	Programación en Python:
+Algoritmia.
+Programación orientada a objetos.
+Pilas y Colas.
+Lectura y escritura en archivos CSV.
+Paquete Numpy.
+Paquete Pandas.
+Pseint.
+
+2.	Programación en Java:
+Algoritmia.
+Diagramas UML.
+Abstracción, herencia, polimorfismo y encapsulamiento.
+Colecciones.
+Interfaces gráficas usando swing.
+Pruebas unitarias básicas.
+Persistencia usando bases de datos (MySQL - Workbench).
+
+3.	Diseño de páginas web usando diferentes tecnologías
+HTML5, CSS3, Javascript,
+ReactJs, NodeJs, Stack MERN.
+
+
+4.     Manejo de interfaz Git y repositorios en Github:
+Conocimientos basicos en las funcionalidades de Git y la compilación
+con la nube de Github.
 
 
