@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1. INFORMACIÓN BÁSICA DEL PROYECTO
  	 	 	 	 	 	 
 UNIVERSIDAD DE ANTIOQUIA 
@@ -27,6 +28,36 @@ casa o trabajo.
 Está dirigido a clientes internos y externos de la compañía. La página
 puede ser utilizada por cualquier persona con conocimientos básicos de
 navegación en internet. 
+=======
+****************************************************************************
+**************************************************************************** 	
+INFORMACIÓN BÁSICA DEL PROYECTO						  **
+ 	 	 	 	 	 				  **
+UNIVERSIDAD DE ANTIOQUIA 					          **	
+	 	 	 	 					  **
+NOMBRE DEL PROYECTO	Página web empresa de manufactura Textiles La 15  **
+PROGRAMA DE FORMACIÓN	Misión Tic 2022					  **	
+TIEMPO DE DURACIÓN 	Inicio:	13/09/2021	Fin:	23/10/2021	  **
+ 	 	 			  				  **	 			  
+EQUIPO DE DESARROLLO	Christian Morales				  **
+ 		 	Claudia Ospina					  **
+ 		 	Ricardo Restrepo				  **
+ 		 	Francy Corredor					  **
+ 	 	 	Andres Marulanda				  **
+									  **
+****************************************************************************
+****************************************************************************
+
+DEFINICIÓN GENERAL DEL PROYECTO
+
+Se propone analizar, diseñar y construir una aplicación software que   permita controlar las ventas físicas y virtuales de una empresa de manufactura y hacerles el 
+correspondiente seguimiento. 
+
+Con el objetivo de que cada una de las personas interesadas en el proceso de venta pueda tener conocimiento del estado de la misma y que los clientes puedan realizar 
+compras desde la comodidad de su casa o trabajo.
+
+Está dirigido a clientes internos y externos de la compañía. La página puede ser utilizada por cualquier persona con conocimientos básicos de navegación en internet. 
+>>>>>>> release_Andres
 
 Con la página web se busca:
 1.	Que tanto los clientes internos como externos puedan tener acceso a información de su interés y necesidad desde cualquier lugar.
@@ -45,6 +76,7 @@ Especificación de los requerimientos del proyecto.
 		Información de la autoría.
 		Alcances y limitaciones.
 	
+<<<<<<< HEAD
 
 Procedimientos de instalación y prueba.
 		Herramientas utilizadas.
@@ -94,20 +126,88 @@ release_"nombre_del_desarrollador"; todo ello mediante los comandos branch, comm
 
 
  
+=======
+>>>>>>> release_Andres
 
-2. COLABORADORES:
+Procedimientos de instalación y prueba.
+Herramientas utilizadas.
 
-NOMBRE: Andrés Felipe Marulanda.
+Para lograr llevar a cabo el proyecto es necesario contar con un grupo de herramientas que permitirán organizar, planear, estructurar y desarrollar la aplicación web.  
 
-PROFESIÓN: Técnico en electrónica y desarrollador web.
+● IDE (interface development environment). Se utilizará Visual Studio Code para desarrollar frameworks como ReactJs y NodeJs
 
+● Git. Es un software de control de versiones de código distribuido, que se instala en la máquina local del desarrollador. 
+
+● Github (repositorio). Es una carpeta para alojar proyectos utilizando el sistema de control de versiones Git. 
+Se utiliza principalmente para la creación de código fuente de programas de ordenador.
+
+● Trello (administrador de proyecto). Es un software de administración de proyectos que permite llevar el registro de todas las metas determinadas para cada uno de los sprints, 
+así como las actividades de su responsable.   
+
+● Heroku. Es una plataforma en la nube que permite a las empresas construir, entregar y supervisar aplicaciones para luego poder alojarlas en la nube y posibilitar el acceso a 
+los usuarios de las aplicaciones que se construyen.
+
+● Stack tecnológico. La plataforma tecnológica expuesta en el curso Desarrollo de aplicaciones web es Heroku, o la que se crea más pertinente para los despliegues.
+		
+Seguimiento detallado a grandes rasgos.
+
+El desarrollo de aplicaciones web tendrá como base un proyecto dividido en cinco (5) sprints y deberá ser construido en un equipo de cinco (5) integrantes. Junto con los 
+integrantes del equipo en el que te encuentras, deberás establecer un cronograma de actividades para sincronizar de manera ágil el trabajo a llevar a cabo.
+
+Cada grupo tendrá asignado un tutor que le dará soporte dependiendo de las necesidades que surjan en la ejecución del proyecto. Además, el equipo debe diligenciar diariamente 
+unformulario que encontrará en la plataforma, en el cual se deberán registrar los avances, las dificultades y el cumplimiento de compromisos de cada uno de los integrantes. 
+
+El tutor registrará el seguimiento de los avances que haga el equipo, e igualmente las dificultades y el cumplimiento de los compromisos de cada uno de sus miembros según lo 
+registrado en los Dailys y en el administrador de proyectos (Trello). Si dentro de ese seguimiento se tiene alguna consulta o se requiere aclarar dudas e inquietudes, se podrá 
+solicitar al tutor un encuentro sincrónico por medio de la plataforma; dicho encuentro quedará grabado en plataforma para que accedas a su contenido cada vez que lo necesites. 
+		
+Instalación.
+Se va a desplegar a traves de Heroku
+
+Arquitectura del sistema.
+Descripción jerárquica.
+
+Están organizados en espacios de nombres donde parte desde el repositorio hasta la linea de comandos a usar de manera remota mediante una cadena de texto que integra las 
+funcionalidades del software llevado a producción como último recurso.
+
+Diagrama de módulos.
+Repositorio/Directorio.git/Directorio de trabajo/índice/Commit/Branch/Head/
+Comandos(init/config/help/status/add/branch/checkout/clone/commit/diff/grep/
+log/merge/mv/pull/push/rebase/reset/rm).
+
+Descripción individual de los módulos (para que existe el módulo).
+
+Repositorio:
+Descripción general y propósito:
+Es un conjunto de archivos, directorios, registros, cambios (commits), y encabezados (heads).
+Archivar la documentación y procesos en la nube.
+
+Responsabilidad y restricciones:
+
+Crear ramas para los distintos administradores y proporcionar el enlace vía remota integrando cambios que se configuran en ramas posteriores y directorios dentro del repositorio.
+
+Los desarrolladores secundarios no pueden llevar a cabo configuraciones y ajustes sobre la rama principal.
+
+Dependencias:
+Conexión remota con el equipo del desarrollador y el repositorio final en Github.
+
+Implementación:
+Se encuentra en los repositorios individuales de los equipos de los desarrolladores y en ramas release_"nombre_del_desarrollador"; todo ello mediante los comandos branch, 
+commit, merge.
+
+
+
+COLABORADORES.
+
+NOMBRE: Francy Milena Corredor Ramírez
+PROFESIÓN: Ingeniera Industrial, Desarrollador web.
 COMPETENCIAS: 
 
-1.	Electrónica Básica:
-Análisis y diseño de circuitos eléctricos y electrónicos.
-Análisis de circuitos digitales.
-Programación de microcontroladores y microprocesadores.
-Programación básica en C++.
+1.	Ingeniería Industrial:
+Formulación y evaluación de proyectos.
+Estructuración de Sistema de Gestión de Calidad.
+Estructuración de Sistema de Gestión de la Seguridad y Salud en el trabajo.
+Procesos administrativos y de recursos humanos.
 
 2.	Programación en Python:
 Algoritmia.
@@ -124,26 +224,93 @@ Abstracción, herencia, polimorfismo y encapsulamiento.
 Colecciones.
 Interfaces gráficas usando swing.
 Pruebas unitarias básicas.
+Persistencia usando bases de datos (MySQL - Workbench)
+
+NOMBRE: Cristian Humberto Morales Espinosa.
+PROFESIÓN: Técnico en sistemas y tecnólogo en electricidad Industrial.
+COMPETENCIAS: 
+
+1.	Programación en Python:
+Algoritmia.
+Programación orientada a objetos.
+Pilas y Colas.
+Lectura y escritura en archivos CSV.
+Paquete Numpy.
+Paquete Pandas.
+Pseint.
+
+2.	Programación en Java:
+Algoritmia.
+Diagramas UML.
+Abstracción, herencia, polimorfismo y encapsulamiento.
+Colecciones.
+Interfaces gráficas usando swing.
+Pruebas unitarias básicas.
 Persistencia usando bases de datos (MySQL - Workbench).
 
-4.	Diseño de páginas web usando diferentes tecnologías
-HTML5, CSS3, Javascript, Typescript
+3.	Diseño de páginas web usando diferentes tecnologías
+HTML5, CSS3, JavaScript,
 ReactJs, NodeJs, Stack MERN.
 
+<<<<<<< HEAD
 
 
 NOMBRE: Francy Milena Corredor Ramírez
 
 
 PROFESIÓN: Ingeniera Industrial, Desarrollador web.
+=======
 
+4.     Manejo de interfaz Git y repositorios en Github:
+Conocimientos básicos en las funcionalidades de Git y la compilación
+con la nube de Github.
+>>>>>>> release_Andres
+
+NOMBRE: Ricardo Restrepo Angel
+PROFESIÓN: Estudiante de Ingeniería Electrónica
 COMPETENCIAS: 
 
-1.	Ingeniería Industrial:
-Formulación y evaluación de proyectos.
-Estructuración de Sistema de Gestión de Calidad.
-Estructuración de Sistema de Gestión de la Seguridad y Salud en el trabajo.
-Procesos administrativos y de recursos humanos.
+1.	Ingeniería Electrónica
+Conocimientos en redes, manejo de switches y enrutadores, 
+Programación de aplicaciones móviles, 
+Programación C, C++, PHP, base de datos con SQL.
+
+1.	Programación en Python:
+Algoritmia.
+Programación orientada a objetos.
+Pilas y Colas.
+Lectura y escritura en archivos CSV.
+Paquete Numpy.
+Paquete Pandas.
+Pseint.
+
+2.	Programación en Java:
+Algoritmia.
+Diagramas UML.
+Abstracción, herencia, polimorfismo y encapsulamiento.
+Colecciones.
+Interfaces gráficas usando swing.
+Pruebas unitarias básicas.
+Persistencia usando bases de datos (MySQL - Workbench).
+
+3.	Diseño de páginas web usando diferentes tecnologías
+HTML5, CSS3, JavaScript,
+ReactJs, NodeJs, Stack MERN.
+
+
+4.     Manejo de interfaz Git y repositorios en Github:
+Conocimientos básicos en las funcionalidades de Git y la compilación
+con la nube de Github.
+
+NOMBRE: Andrés Felipe Marulanda.
+PROFESIÓN: Técnico en electrónica y desarrollador web.
+COMPETENCIAS: 
+
+1.	Electrónica Básica:
+Análisis y diseño de circuitos eléctricos y electrónicos.
+Análisis de circuitos digitales.
+Programación de microcontroladores y microprocesadores.
+Programación básica en C++.
 
 2.	Programación en Python:
 Algoritmia.
@@ -188,6 +355,7 @@ Interfaces gráficas usando swing.
 Pruebas unitarias básicas.
 Persistencia usando bases de datos (MySQL - Workbench).
 
+<<<<<<< HEAD
 3.	Diseño de páginas web usando diferentes tecnologías
 HTML5, CSS3, Javascript,
 ReactJs, NodeJs, Stack MERN.
@@ -197,5 +365,10 @@ ReactJs, NodeJs, Stack MERN.
 Conocimientos basicos en las funcionalidades de Git y la compilación
 con la nube de Github.
 
+=======
+4.	Diseño de páginas web usando diferentes tecnologías
+HTML5, CSS3, JavaScript, Typescript
+ReactJs, NodeJs, Stack MERN.
+>>>>>>> release_Andres
 
 
