@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-1. INFORMACIÓN BÁSICA DEL PROYECTO
+INFORMACIÓN BÁSICA DEL PROYECTO
  	 	 	 	 	 	 
 UNIVERSIDAD DE ANTIOQUIA 
 	 	 	 	 
@@ -8,56 +7,19 @@ PROGRAMA DE FORMACIÓN	Misión Tic 2022
 TIEMPO DE DURACIÓN 	Inicio:	13/09/2021	Fin:	23/10/2021
  	 	 				 
 EQUIPO DE DESARROLLO	Christian Morales
- 		 	Claudia Ospina
- 		 	Ricardo Restrepo
- 		 	Francy Corredor
- 	 	 	Andres Marulanda
+ 		 		Claudia Ospina
+ 		 		Ricardo Restrepo
+ 		 		Francy Corredor
+ 	 	 		Andres Marulanda
 
-
-2. DEFINICIÓN GENERAL DEL PROYECTO.
-
-Se propone analizar, diseñar y construir una aplicación software que 
-permita controlar las ventas físicas y virtuales de una empresa de 
-manufactura y hacerles el correspondiente seguimiento. 
-
-Con el objetivo de que cada una de las personas interesadas en el 
-proceso de venta pueda tener conocimiento del estado de la misma
-y que los clientes puedan realizar compras desde la comodidad de su
-casa o trabajo.
-
-Está dirigido a clientes internos y externos de la compañía. La página
-puede ser utilizada por cualquier persona con conocimientos básicos de
-navegación en internet. 
-=======
-****************************************************************************
-**************************************************************************** 	
-INFORMACIÓN BÁSICA DEL PROYECTO						  **
- 	 	 	 	 	 				  **
-UNIVERSIDAD DE ANTIOQUIA 					          **	
-	 	 	 	 					  **
-NOMBRE DEL PROYECTO	Página web empresa de manufactura Textiles La 15  **
-PROGRAMA DE FORMACIÓN	Misión Tic 2022					  **	
-TIEMPO DE DURACIÓN 	Inicio:	13/09/2021	Fin:	23/10/2021	  **
- 	 	 			  				  **	 			  
-EQUIPO DE DESARROLLO	Christian Morales				  **
- 		 	Claudia Ospina					  **
- 		 	Ricardo Restrepo				  **
- 		 	Francy Corredor					  **
- 	 	 	Andres Marulanda				  **
-									  **
-****************************************************************************
-****************************************************************************
 
 DEFINICIÓN GENERAL DEL PROYECTO
 
-Se propone analizar, diseñar y construir una aplicación software que   permita controlar las ventas físicas y virtuales de una empresa de manufactura y hacerles el 
-correspondiente seguimiento. 
+Se propone analizar, diseñar y construir una aplicación software que   permita controlar las ventas físicas y virtuales de una empresa de manufactura y hacerles el correspondiente seguimiento. 
 
-Con el objetivo de que cada una de las personas interesadas en el proceso de venta pueda tener conocimiento del estado de la misma y que los clientes puedan realizar 
-compras desde la comodidad de su casa o trabajo.
+Con el objetivo de que cada una de las personas interesadas en el proceso de venta pueda tener conocimiento del estado de la misma y que los clientes puedan realizar compras desde la comodidad de su casa o trabajo.
 
 Está dirigido a clientes internos y externos de la compañía. La página puede ser utilizada por cualquier persona con conocimientos básicos de navegación en internet. 
->>>>>>> release_Andres
 
 Con la página web se busca:
 1.	Que tanto los clientes internos como externos puedan tener acceso a información de su interés y necesidad desde cualquier lugar.
@@ -76,58 +38,6 @@ Especificación de los requerimientos del proyecto.
 		Información de la autoría.
 		Alcances y limitaciones.
 	
-<<<<<<< HEAD
-
-Procedimientos de instalación y prueba.
-		Herramientas utilizadas.
-		Seguimiento detallado a grandes rasgos.
-		Instalación.
-	
-
-Arquitectura del sistema.
-		Descripción jerárquica.
-
-Estan organizados en espacios de nombres donde parte desde el repositorio hasta la
-linea de comandos a usar de manera remota mediante una cadena de texto que integra 
-las funcionalidades del software llevado a producción como ultimo recurso.
-
-		Diagrama de módulos.
-Repositorio/Directorio.git/Directorio de trabajo/índice/Commit/Branch/Head/
-Comandos(init/config/help/status/add/branch/checkout/clone/commit/diff/grep/
-log/merge/mv/pull/push/rebase/reset/rm).
-
-	
-	        Descripción individual de los módulos (para que existe el módulo).
-
-Repositorio:
-
-Descripción general y propósito:
-
-Es un conjunto de archivos, directorios, registros, cambios (commits),
- y encabezados (heads).
-Archivar la documentación y procesos en la nube.
-
-Responsabilidad y restricciones:
-
-Crear ramas para los distintos administradores y proporcionar el enlace via remota
-integrando cambios que se configuran en ramas posteriores y directorios dentro del repositorio.
-
-Los desarrolladores secundarios no pueden llevar a cabo configuraciones y ajustes sobre la rama 
-principal.
-
-Dependencias:
-
-Conexión remota con el equipo del desarrollador y el repositorio final en Github.
-
-Implementación:
-
-Se encuentra en los repositorios individuales de los equipos de los desarrolladores y en ramas 
-release_"nombre_del_desarrollador"; todo ello mediante los comandos branch, commit, merge.
-
-
- 
-=======
->>>>>>> release_Andres
 
 Procedimientos de instalación y prueba.
 Herramientas utilizadas.
@@ -151,11 +61,11 @@ los usuarios de las aplicaciones que se construyen.
 		
 Seguimiento detallado a grandes rasgos.
 
-El desarrollo de aplicaciones web tendrá como base un proyecto dividido en cinco (5) sprints y deberá ser construido en un equipo de cinco (5) integrantes. Junto con los 
-integrantes del equipo en el que te encuentras, deberás establecer un cronograma de actividades para sincronizar de manera ágil el trabajo a llevar a cabo.
+El desarrollo de aplicaciones web tendrá como base un proyecto dividido en cinco (5) sprints y deberá ser construido en un equipo de cinco (5) integrantes. Junto con los integrantes 
+del equipo en el que te encuentras, deberás establecer un cronograma de actividades para sincronizar de manera ágil el trabajo a llevar a cabo.
 
-Cada grupo tendrá asignado un tutor que le dará soporte dependiendo de las necesidades que surjan en la ejecución del proyecto. Además, el equipo debe diligenciar diariamente 
-unformulario que encontrará en la plataforma, en el cual se deberán registrar los avances, las dificultades y el cumplimiento de compromisos de cada uno de los integrantes. 
+Cada grupo tendrá asignado un tutor que le dará soporte dependiendo de las necesidades que surjan en la ejecución del proyecto. Además, el equipo debe diligenciar diariamente un 
+formulario que encontrará en la plataforma, en el cual se deberán registrar los avances, las dificultades y el cumplimiento de compromisos de cada uno de los integrantes. 
 
 El tutor registrará el seguimiento de los avances que haga el equipo, e igualmente las dificultades y el cumplimiento de los compromisos de cada uno de sus miembros según lo 
 registrado en los Dailys y en el administrador de proyectos (Trello). Si dentro de ese seguimiento se tiene alguna consulta o se requiere aclarar dudas e inquietudes, se podrá 
@@ -252,19 +162,10 @@ Persistencia usando bases de datos (MySQL - Workbench).
 HTML5, CSS3, JavaScript,
 ReactJs, NodeJs, Stack MERN.
 
-<<<<<<< HEAD
-
-
-NOMBRE: Francy Milena Corredor Ramírez
-
-
-PROFESIÓN: Ingeniera Industrial, Desarrollador web.
-=======
 
 4.     Manejo de interfaz Git y repositorios en Github:
 Conocimientos básicos en las funcionalidades de Git y la compilación
 con la nube de Github.
->>>>>>> release_Andres
 
 NOMBRE: Ricardo Restrepo Angel
 PROFESIÓN: Estudiante de Ingeniería Electrónica
@@ -327,48 +228,10 @@ Abstracción, herencia, polimorfismo y encapsulamiento.
 Colecciones.
 Interfaces gráficas usando swing.
 Pruebas unitarias básicas.
-Persistencia usando bases de datos (MySQL - Workbench)
-
-
-NOMBRE: Cristian Humberto Morales Espinosa.
-
-PROFESIÓN: Técnico en sistemas y tecnologo en electricidad Industrial.
-
-COMPETENCIAS: 
-
-
-1.	Programación en Python:
-Algoritmia.
-Programación orientada a objetos.
-Pilas y Colas.
-Lectura y escritura en archivos CSV.
-Paquete Numpy.
-Paquete Pandas.
-Pseint.
-
-2.	Programación en Java:
-Algoritmia.
-Diagramas UML.
-Abstracción, herencia, polimorfismo y encapsulamiento.
-Colecciones.
-Interfaces gráficas usando swing.
-Pruebas unitarias básicas.
 Persistencia usando bases de datos (MySQL - Workbench).
 
-<<<<<<< HEAD
-3.	Diseño de páginas web usando diferentes tecnologías
-HTML5, CSS3, Javascript,
-ReactJs, NodeJs, Stack MERN.
-
-
-4.     Manejo de interfaz Git y repositorios en Github:
-Conocimientos basicos en las funcionalidades de Git y la compilación
-con la nube de Github.
-
-=======
 4.	Diseño de páginas web usando diferentes tecnologías
 HTML5, CSS3, JavaScript, Typescript
 ReactJs, NodeJs, Stack MERN.
->>>>>>> release_Andres
 
 
