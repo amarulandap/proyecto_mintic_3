@@ -19,9 +19,11 @@ EQUIPO DE DESARROLLO	Christian Morales				  **
 
 DEFINICIÓN GENERAL DEL PROYECTO
 
-Se propone analizar, diseñar y construir una aplicación software que   permita controlar las ventas físicas y virtuales de una empresa de manufactura y hacerles el correspondiente seguimiento. 
+Se propone analizar, diseñar y construir una aplicación software que   permita controlar las ventas físicas y virtuales de una empresa de manufactura y hacerles el 
+correspondiente seguimiento. 
 
-Con el objetivo de que cada una de las personas interesadas en el proceso de venta pueda tener conocimiento del estado de la misma y que los clientes puedan realizar compras desde la comodidad de su casa o trabajo.
+Con el objetivo de que cada una de las personas interesadas en el proceso de venta pueda tener conocimiento del estado de la misma y que los clientes puedan realizar 
+compras desde la comodidad de su casa o trabajo.
 
 Está dirigido a clientes internos y externos de la compañía. La página puede ser utilizada por cualquier persona con conocimientos básicos de navegación en internet. 
 
@@ -65,11 +67,11 @@ los usuarios de las aplicaciones que se construyen.
 		
 Seguimiento detallado a grandes rasgos.
 
-El desarrollo de aplicaciones web tendrá como base un proyecto dividido en cinco (5) sprints y deberá ser construido en un equipo de cinco (5) integrantes. Junto con los integrantes 
-del equipo en el que te encuentras, deberás establecer un cronograma de actividades para sincronizar de manera ágil el trabajo a llevar a cabo.
+El desarrollo de aplicaciones web tendrá como base un proyecto dividido en cinco (5) sprints y deberá ser construido en un equipo de cinco (5) integrantes. Junto con los 
+integrantes del equipo en el que te encuentras, deberás establecer un cronograma de actividades para sincronizar de manera ágil el trabajo a llevar a cabo.
 
-Cada grupo tendrá asignado un tutor que le dará soporte dependiendo de las necesidades que surjan en la ejecución del proyecto. Además, el equipo debe diligenciar diariamente un 
-formulario que encontrará en la plataforma, en el cual se deberán registrar los avances, las dificultades y el cumplimiento de compromisos de cada uno de los integrantes. 
+Cada grupo tendrá asignado un tutor que le dará soporte dependiendo de las necesidades que surjan en la ejecución del proyecto. Además, el equipo debe diligenciar diariamente 
+unformulario que encontrará en la plataforma, en el cual se deberán registrar los avances, las dificultades y el cumplimiento de compromisos de cada uno de los integrantes. 
 
 El tutor registrará el seguimiento de los avances que haga el equipo, e igualmente las dificultades y el cumplimiento de los compromisos de cada uno de sus miembros según lo 
 registrado en los Dailys y en el administrador de proyectos (Trello). Si dentro de ese seguimiento se tiene alguna consulta o se requiere aclarar dudas e inquietudes, se podrá 
@@ -81,9 +83,8 @@ Se va a desplegar a traves de Heroku
 Arquitectura del sistema.
 Descripción jerárquica.
 
-Están organizados en espacios de nombres donde parte desde el repositorio hasta la
-linea de comandos a usar de manera remota mediante una cadena de texto que integra 
-las funcionalidades del software llevado a producción como último recurso.
+Están organizados en espacios de nombres donde parte desde el repositorio hasta la linea de comandos a usar de manera remota mediante una cadena de texto que integra las 
+funcionalidades del software llevado a producción como último recurso.
 
 Diagrama de módulos.
 Repositorio/Directorio.git/Directorio de trabajo/índice/Commit/Branch/Head/
@@ -94,24 +95,21 @@ Descripción individual de los módulos (para que existe el módulo).
 
 Repositorio:
 Descripción general y propósito:
-Es un conjunto de archivos, directorios, registros, cambios (commits),
- y encabezados (heads).
+Es un conjunto de archivos, directorios, registros, cambios (commits), y encabezados (heads).
 Archivar la documentación y procesos en la nube.
 
 Responsabilidad y restricciones:
 
-Crear ramas para los distintos administradores y proporcionar el enlace vía remota
-integrando cambios que se configuran en ramas posteriores y directorios dentro del repositorio.
+Crear ramas para los distintos administradores y proporcionar el enlace vía remota integrando cambios que se configuran en ramas posteriores y directorios dentro del repositorio.
 
-Los desarrolladores secundarios no pueden llevar a cabo configuraciones y ajustes sobre la rama 
-principal.
+Los desarrolladores secundarios no pueden llevar a cabo configuraciones y ajustes sobre la rama principal.
 
 Dependencias:
 Conexión remota con el equipo del desarrollador y el repositorio final en Github.
 
 Implementación:
-Se encuentra en los repositorios individuales de los equipos de los desarrolladores y en ramas 
-release_"nombre_del_desarrollador"; todo ello mediante los comandos branch, commit, merge.
+Se encuentra en los repositorios individuales de los equipos de los desarrolladores y en ramas release_"nombre_del_desarrollador"; todo ello mediante los comandos branch, 
+commit, merge.
 
 
 
