@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actuaización Datos vendedores</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles2-home.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body style="background-color:#FFF9C4">
+    <form style="background-color:#E3DAC9">
+        <fieldset>
+            <legend style="font family: Century"> Actualización de datos vendedores </legend>
+            <center>
+                <h1 style="font-family: Bebas"> Información colaboradores Departamento de ventas </h1><br>
+            </center>
+            
+            <div class="form-floating">
+                <label style="font-family: 'Arial Narrow'">Seleccione el tipo de identificación:</label>
+                <select style="font-family: 'Arial Narrow'"; class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                  <option style="font-family: 'Arial Narrow'"; selected>Seleccione una opción</option>
+                  <option style="font-family: 'Arial Narrow'"; value="1">CC. Cédula de ciudadanía</option>
+                  <option style="font-family: 'Arial Narrow'";  value="2">CE. Cédula de extranjeria</option>
+                  <option style="font-family: 'Arial Narrow'"; value="3">PA. Pasaporte</option>
+                </select>
+                <label style="font-family: 'Arial Narrow'">Ingrese número de identificación de la persona a consultar:</label>
+                <input type="text" name="identificación">
+                <button style=".btn-primary"> Consultar </button><br><br><br>
+              </div>
+            
+            
+            <label style="font-family: 'Arial Narrow'">Ingrese nombres</label>
+            <input type="text" name="nombres">
+            <label style="font-family: 'Arial Narrow'">Ingrese apellidos</label>
+            <input type="text" name="apellidos">
+            <label style="font-family: 'Arial Narrow'"> Fecha de ingreso a la compañía: </label>
+            <input type="date" name="fecha"><br><br><br>
+            <label style="font-family: 'Arial Narrow'">Ingrese código de vendedor</label>
+            <input type="text" name="código">
+            <label for="Especialidad">Especialidad: </label>
+            <select name="Especialidad" id="Especialidad">
+                <option value="Especialidad 1">Especialidad 1</option>
+                <option value="Especialidad 2">Especialidad 2</option>
+                <option value="Especialidad 3">Especialidad 3</option>
+                <option value="Especialidad 4">Especialidad 4</option>
+                <option value="Especialidad 5">Especialidad 5</option>
+            </select><br><br><br>
+            <label style="font-family: 'Arial Narrow">Genero: </label>
+            <input type="radio" name="Genero" value="Hombre">
+            <label style="font-family: 'Arial Narrow">Hombre</label>
+            <input type="radio" name="Genero" value="Mujer">
+            <label style="font-family: 'Arial Narrow">Mujer</label><br><br><br>
+            <label style="font-family: 'Arial Narrow'">Ingrese dirección</label>
+            <input type="text" name="dirección">
+            <label style="font-family: 'Arial Narrow'">Ingrese teléfono</label>
+            <input type="text" name="teléfono">
+            <label style="font-family: 'Arial Narrow'"> Correo electrónico: </label>
+            <input type="text" name="correo"><br><br>
+            <label style="font-family: 'Arial Narrow'">Estado Civil:</label><br><br>
+            <input type="checkbox" name="estado" id="Soltero">
+            <label style="font-family: 'Arial Narrow'">Soltero/a:</label>
+            <input type="checkbox" name="estado" id="Casado">
+            <label style="font-family: 'Arial Narrow'">Casado/a:</label>
+            <input type="checkbox" name="estado" id="Viudo">
+            <label style="font-family: 'Arial Narrow'">Viudo/a:</label>
+            <input type="checkbox" name="estado" id="Divorciado">
+            <label style="font-family: 'Arial Narrow'">Divorciado/a:</label><br><br>
+            
+            
+            <center>
+                <a class="btn btn-primary" href="#" role="button">Regresar al inicio</a>
+                <input class="btn btn-primary" type="button" value="Actualizar">
+                <input class="btn btn-primary" type="submit" value="Nuevo Registro">
+                <input class="btn btn-primary" type="reset" value="Eliminar">
+            </center>
+        </fieldset>
+    </form>   
+    <script src="assets/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
