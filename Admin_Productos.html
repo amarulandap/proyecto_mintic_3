@@ -111,9 +111,77 @@
             </fieldset>
           </form>
         </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6"></div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <form>
+                <center>
+                    <h1 style="font-family: 'Arial Narrow'"> Consulta de productos </h1><br>
+                </center>
+                <label style="font-family: 'Arial Narrow';">Seleccione el parametro para la consulta</label>
+                <select style="font-family: 'Arial Narrow'" name="opciones">
+                    <option style="font-family: 'Arial Narrow'" value="Parametro de busqueda">Código de producto
+                    </option>
+                    <option style="font-family: 'Arial Narrow'" value="Parametro de busqueda">Descripción del
+                        producto</option>
+                    <option style="font-family: 'Arial Narrow'" value="Parametro de busqueda">Identificación del
+                        clientes </option>
+                </select><br><br>
+                <label style="font-family: 'Arial Narrow'">Ingrese parametro:</label>
+                <input type="text">
+                <button class="btn btn-primary" style="font-family: 'Arial Narrow'""> Consultar </button><br><br>
+
+                    <table class=" table table-success table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"># identificación de producto</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Valor Unitario</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Cuerotex</td>
+                            <td>30.000</td>
+                            <td>Disponible</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Poliester</td>
+                            <td>20.000</td>
+                            <td>No Disponible</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Lycra</td>
+                            <td>30.000</td>
+                            <td>Disponible</td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+                    <label style="font-family: 'Arial Narrow';">Fecha de inicio:</label>
+                    <input type="date">
+                    <label style="font-family: 'Arial Narrow';">Fecha de fin:</label>
+                    <input type="date"><br><br>
+                    <label style="font-family: 'Arial Narrow'" for="Estado">Estado: </label>
+                    <select style="font-family: 'Arial Narrow'" name="Estado" id="Disponibilidad">
+                        <option style="font-family: 'Arial Narrow'" ; selected>Seleccione una opción</option>
+                        <option style="font-family: 'Arial Narrow'" ; value="1">Disponible</option>
+                        <option style="font-family: 'Arial Narrow'" ; value="2">No Disponible</option>
+                    </select>
+                    <button class="btn btn-primary" style="font-family: 'Arial Narrow'">Generar reporte</button>
+
+
+
+
+            </form>
+
+        </div>
       </div>
     </div>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
   </body>
 </html>
