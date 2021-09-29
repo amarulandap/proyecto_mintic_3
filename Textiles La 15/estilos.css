@@ -28,6 +28,7 @@ header{
 #h2{
     text-align: center;
 }
+
 .pieDePagina{
     background-color: #6495ED;
     color:white;
@@ -48,9 +49,11 @@ section{
 }
 
 
+
 header a{
     color:white;
     text-align: center;
+
 }
 
 header a:hover{
@@ -58,6 +61,7 @@ header a:hover{
     font-size: 18px;
     font-weight: 800;
     margin-left: 10px;
+    width: 120%;
 }
 
 .button{
@@ -151,3 +155,35 @@ a {
     clear: both;
     width: 100%;
   }
+
+
+
+
+
+.subtitulo{
+  display:grid;
+  justify-content: center
+  
+}  
+
+.tarjetas{
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: 300px 300px 300px 300px;
+}
+
+
+.img-fluid {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.card-text{
+  text-justify:distribute;
+  text-align: justify;
+}
+
+.card-title{
+  font-size: 18px;
+}
