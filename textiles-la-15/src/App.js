@@ -13,6 +13,12 @@ function App() {
         <Route path="/" exact>
           <h1>Hola Mundo</h1>
         </Route>
+        <Route path="/login" exact>
+          //poner el componente de login aqui
+        </Route>
+        <Route path="/register" exact>
+          //poner el componente de registro de usuario
+        </Route>
         <Route path="/registerProducts" exact>
           <RegisterProducts />
         </Route>

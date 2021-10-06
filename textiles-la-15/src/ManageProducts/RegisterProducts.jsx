@@ -5,7 +5,7 @@ function RegisterProducts(props) {
     let title = props.title;
     return (
         <Fragment>
-            <div class="container" id="form-product">
+            <div class="container-fluid" id="form-product">
                 <div class="row">
                     <div class="col-6 col-sm-6">
                         <form>
