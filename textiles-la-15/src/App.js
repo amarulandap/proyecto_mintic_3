@@ -1,24 +1,29 @@
+import React, { Fragment } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import RegisterProducts from './ManageProducts/RegisterProducts';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import NavbarComponent from './shared/components/navbar/NavbarComponent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavbarComponent/>
+      <Switch>
+        <Route path="/" exact>
+          <h1>Hola Mundo</h1>
+        </Route>
+        <Route path="/login" exact>
+          //poner el componente de login aqui
+        </Route>
+        <Route path="/register" exact>
+          //poner el componente de registro de usuario
+        </Route>
+        <Route path="/registerProducts" exact>
+          <RegisterProducts />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
