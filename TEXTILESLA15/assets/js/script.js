@@ -30,6 +30,8 @@ function anchoPage(){
 anchoPage();
 
 
+
+
     function iniciarSesion(){
         if (window.innerWidth > 850){
             formulario_login.style.display = "block";

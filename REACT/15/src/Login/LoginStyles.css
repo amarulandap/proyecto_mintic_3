@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+body{
+    background-image: url("https://media.fashionnetwork.com/m/f773/b188/1c2a/6ea2/6e5a/3e58/5d8d/42e3/ba92/c070/c070.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h3{
+    font-size:50px;
+    justify-content: center;
+    text-align: center;
+    text-shadow:-1px -1px 1px #aaa,
+    0px 4px 1px rgba(0,0,0,0.5),
+    4px 4px 5px rgba(0,0,0,0.7),
+    0px 0px 7px rgba(0,0,0,0.4);;
+    position: center;
+    font-family:'Times New Roman', Times, serif;
+    color:#582f0e;
+}
+
+.container {
+    
+    display: relative;
+    align-items: center;
+    background: white;
+    padding: 80px 20px;
+    width: 100%;
+    max-width: 380px;
+    position: bottom;
+    border-radius: 20px;
+    top: -185px;
+    left: 10px;
+    margin-top: 140px;
+   
+}
+
+
+.btn-primary{
+
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #582f0e;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+
+
+}
+

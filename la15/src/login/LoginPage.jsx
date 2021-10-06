@@ -1,44 +1,32 @@
-import React,{useState} from "react";
+/* eslint-disable react/jsx-no-undef */
+import React from "react";
 
-const LoginPage = () => {
-
-        //estos los states
-    const [usuario,setUsuario] = useState({
-        email:'',
-        password:'',
-
-    });
-   
-
-//funciones
-
-    const usuChange =(e) =>{
-        setUsuario({
-                ...usuario,
-                [e.target.name] : e.target.value
-        })
-    }
+  
 
 
+function LoginPage() {
+  return(
+    <>
+  
 
-    return(
-        <form>
-        <div className="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name='Email' value={usuario.email} onChange ={usuChange}/>
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
-      </form>
+        <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Correo electronico</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+          </Form.Group>
 
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Contraseña</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Iniciar Sesion
+          </Button>
+        </Form>
+      </>
     )
 }
 
