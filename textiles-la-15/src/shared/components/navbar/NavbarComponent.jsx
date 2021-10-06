@@ -16,6 +16,7 @@ function NavbarComponent(props) {
                             <Link to="/"  className="nav-link active" aria-current="page" >Home</Link>
                             <Link to="/login" className="nav-link" >Login</Link>
                             <Link to="/register" className="nav-link" >Register</Link>
+                            <Link to="/registerProducts" className="nav-link" >Products</Link>
                         </div>
                     </div>
                 </div>
