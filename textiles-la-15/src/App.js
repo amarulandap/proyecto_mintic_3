@@ -1,16 +1,16 @@
-import React, { Fragment } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import RegisterProducts from './ManageProducts/RegisterProducts';
 import UsersRegister from './UsersRegister/UsersRegister';
 import UsersForm from './UsersForm/UsersForm';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavbarComponent from './shared/components/navbar/NavbarComponent';
+import ListProducts from './ManageProducts/GestionProductos';
 
 function App() {
   return (
     <Router>
-      <NavbarComponent/>
+      <NavbarComponent title="Textiles la 15" />
       <Switch>
         <Route path="/" exact>
           <h1>Hola Mundo</h1>
@@ -23,6 +23,12 @@ function App() {
         </Route>
         <Route path="/registerProducts" exact>
           <RegisterProducts />
+        </Route>
+        <Route path="/listProducts" exact>
+          <ListProducts/>
+        </Route>
+        <Route path="/GestionVentas" exact>
+          <ListProducts/>
         </Route>
         <Route path="/usersForm" exact>
           <UsersForm />

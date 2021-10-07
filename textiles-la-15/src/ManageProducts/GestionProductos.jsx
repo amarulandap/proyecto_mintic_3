@@ -3,8 +3,7 @@ import "./producto.css";
 import { Link } from "react-router-dom";
 
 
-function RegisterProducts(props) {
-    let title = props.title;
+function ListProducts(props) {
     return (
         <Fragment>
             <div class="container-fluid" id="form-product">
@@ -91,4 +90,4 @@ function RegisterProducts(props) {
     );
 }
 
-export default RegisterProducts;
+export default ListProducts;
