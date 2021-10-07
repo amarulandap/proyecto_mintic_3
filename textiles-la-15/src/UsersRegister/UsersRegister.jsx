@@ -2,16 +2,17 @@ import React, {Fragment} from "react";
 import { Link } from "react-router-dom";
 import './UsersRegisterStyles.css';
 
-function VerifyRegister() {
-
+function verifyRegister (){
     let identificationNumber = document.getElementById("txtIdIngreso").value;
     let passRegisterUsers = document.getElementById("pssIngresoSistema").value;
 
-    alert(identificationNumber);
-    alert(passRegisterUsers);
-
+    if (identificationNumber == '71388303' && passRegisterUsers == 'pipe1981'){
+        alert(identificationNumber);
+        alert(passRegisterUsers);
+    }else{
+        alert("datos incorrectos");
+    }
 }
-
 
 function UsersRegister() {
 
@@ -23,7 +24,7 @@ function UsersRegister() {
                 <form class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-4 col-xxl-4 style_form">
                     <div className="mb-3">
                         <label for="txtIdIngreso" className="form-label">Número de identificación</label>
-                        <input type="text" className="form-control" id="txtIdIngreso" placeholder="Ingrese su número de identificación sin espacios ni puntos" />
+                        <input type="text" className="form-control" id="txtIdIngreso" placeholder="Ingrese su número de identificación" />
                     </div>
                     <div>
                         <label for="pssIngresoSistema" className="form-label">Contraseña</label>
@@ -31,11 +32,11 @@ function UsersRegister() {
                     </div>
                     <div className="col-12">
                         <br/>
-                        <Link onClick={VerifyRegister} to="/UsersForm" id="btnIngresoSistema" className="btn btn-primary" aria-current="page">ENVIAR</Link>    
+                        <Link onClick={verifyRegister} to="/UsersForm" id="btnIngresoSistema" className="btn btn-primary" aria-current="page">ENVIAR</Link>    
                     </div>  
                     <div>
                         <br/>
-                        <a href="https://getbootstrap.com/">REGRESAR</a>
+                        <a href="http://localhost:3000/login">REGRESAR</a>
                     </div> 
                 </form>
             </div>
