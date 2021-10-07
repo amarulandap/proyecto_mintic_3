@@ -6,6 +6,7 @@ import UsersForm from './UsersForm/UsersForm';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavbarComponent from './shared/components/navbar/NavbarComponent';
 import ListProducts from './ManageProducts/GestionProductos';
+import GestionVentas from './ManageProducts/GestionVentas';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
           <ListProducts/>
         </Route>
         <Route path="/GestionVentas" exact>
-          <ListProducts/>
+          <GestionVentas />
         </Route>
         <Route path="/usersForm" exact>
           <UsersForm />
