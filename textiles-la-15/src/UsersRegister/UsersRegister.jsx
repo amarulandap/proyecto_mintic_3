@@ -1,18 +1,26 @@
-import React, {Fragment} from "react";
+import React, {Fragment, useState} from "react";
 import { Link } from "react-router-dom";
 import './UsersRegisterStyles.css';
 
-function verifyRegister (){
+function verifyRegister () {
+    
     let identificationNumber = document.getElementById("txtIdIngreso").value;
     let passRegisterUsers = document.getElementById("pssIngresoSistema").value;
 
-    if (identificationNumber == '71388303' && passRegisterUsers == 'pipe1981'){
-        alert(identificationNumber);
-        alert(passRegisterUsers);
+    if (identificationNumber == "71388303" && passRegisterUsers == "pipe1981"){
+        
+        let idUser = {
+            "id":identificationNumber,
+            "pass":passRegisterUsers, 
+        }
+    console.log(idUser);
+
     }else{
-        alert("datos incorrectos");
+        alert("Datos incorrectos");
     }
 }
+
+
 
 function UsersRegister() {
 
@@ -32,7 +40,7 @@ function UsersRegister() {
                     </div>
                     <div className="col-12">
                         <br/>
-                        <Link onClick={verifyRegister} to="/UsersForm" id="btnIngresoSistema" className="btn btn-primary" aria-current="page">ENVIAR</Link>    
+                        <Link onClick={verifyRegister} to="/usersForm" id="btnIngresoSistema" className="btn btn-primary" aria-current="page">ENVIAR</Link>    
                     </div>  
                     <div>
                         <br/>

@@ -37,7 +37,7 @@
 	border:1px solid #057fd0;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:#FFFFFF;
 	font-family:Arial;
 	font-size:12px;
 	font-weight:bold;
@@ -56,13 +56,15 @@
 	top:1px;
 }
 
+.mar_top {
+    margin-top: 10px;
+}
+
 .style_form_users {
-    margin-top: 3px;
     margin:auto;
     background-color: #DEB887; 
     padding: 10px;
     border-radius: 15px;
-    box-shadow: 10px 10px rgb(185, 182, 182);
 
 }
 

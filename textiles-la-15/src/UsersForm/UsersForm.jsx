@@ -31,7 +31,12 @@ function UsersForm (){
 
     return (
         <Fragment>
-            <div>
+            <div class="mar_top">
+                <div class="container-fluid">
+                    <button type="button" class="return_print">REGRESAR</button>
+                    <button type="button" class="return_print">CONSULTAR</button>
+                </div>
+
                 <form className="col-6 col-sm-6 col-md-6 col-lg-6 col-lx-6 col-xxl-6 style_form_users">
                     <h1 className="title_form">
                         Formulario de Registro y actualización de datos
