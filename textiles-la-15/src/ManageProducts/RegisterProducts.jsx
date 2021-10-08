@@ -1,30 +1,53 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import "./RegisterProductsStyles.css";
 
 
 function RegisterProducts(props) {
   /* let title = props.title; */
+  const [id, setId] = useState("");
+  const [descripcion, setDescripcion] = useState("");
+  const [precio, setPrecio] = useState("");
+  const [stock, setStock] = useState("");
+  const [fechaIngreso, setFechaIngreso] = useState("");
+  const [mRollos, setMRollos] = useState("");
+  const [datos, setDatos] = useState("");
+
+  const enviar = () => {
+    let datosForm = {
+      'id':id,
+      'descripcion': descripcion,
+      'precio': precio,
+      'stock': stock,
+      'fechaIngreso': fechaIngreso,
+      'mRollos': mRollos
+    }
+
+    setDatos(datosForm);
+    alert("Productos agregado correctamente")
+  }
+
   return (
     <Fragment>
       <div className="container-fluid" id="form-product">
         <div className="row">
-          <div className="col-6 col-sm-6"></div>
-
-          <div className="col-6 col-sm-6">
+          <hr />
+          <div className="col-8 col-sm-8"></div>
+          <div className="col-4 col-sm-4">
             <form className="container">
               <fieldset>
                 <center>
-                  <h1>Gestion de Productos</h1>
+                  <h1>Agregar Producto</h1>
                   <br />
                 </center>
 
                 <div className="container">
                   <div className="row">
                     <div className="col-sm-4">
-                      <label>Articulo</label>
+                      <label>Descripcion</label>
                     </div>
                     <div className="col-sm-8">
                       <input
+                      onChange={(e) => setDescripcion(e.target.value)}
                       type="text" 
                       id="articulo" />
                     </div>
@@ -36,6 +59,7 @@ function RegisterProducts(props) {
                     </div>
                     <div className="col-sm-8">
                       <input 
+                      onChange={(e) => setPrecio(e.target.value)}
                       type="text" 
                       id="valorUnitario" />
                     </div>
@@ -47,6 +71,7 @@ function RegisterProducts(props) {
                     </div>
                     <div className="col-sm-8">
                       <input
+                      onChange={(e) => setStock(e.target.value)}
                       type="text"  
                       id="numeroDeRollos" />
                     </div>
@@ -59,6 +84,7 @@ function RegisterProducts(props) {
                     </div>
                     <div className="col-sm-8">
                       <input 
+                      onChange={(e) => setFechaIngreso(e.target.value)}
                       type="date"  
                       id="fechaIngreso" />
                     </div>
@@ -71,6 +97,7 @@ function RegisterProducts(props) {
                     </div>
                     <div className="col-sm-8">
                       <input 
+                      onChange={(e) => setMRollos(e.target.value)}
                       type="text" 
                       id="metros" />
                     </div>
@@ -78,43 +105,25 @@ function RegisterProducts(props) {
                   <br />
                   <div className="row">
                     <div className="col-sm-4">
-                      <label>Codigo</label>
+                      <label>Identificador</label>
                     </div>
                     <div className="col-sm-8">
                       <input 
+                      onChange={(e) => setId(e.target.value)}
                       type="text" 
                       id="id" />
                     </div>
                   </div>
                   <br />
-
-                  <div className="row">
-                    <textarea name="Comentarios" rows="3">
-                    </textarea>
-                  </div>
                 </div>
                 <br />
-
-                <center>
-                  <a className="btn btn-primary" href="#" role="button">
-                    Regresar al inicio
-                  </a>
+                
                   <input
-                    className="btn btn-primary"
-                    type="button"
-                    value="Actualizar"
-                  />
-                  <input
+                    onClick = {enviar}
                     className="btn btn-primary"
                     type="submit"
-                    value="Nuevo Registro"
+                    value="Agregar"
                   />
-                  <input
-                    className="btn btn-primary"
-                    type="reset"
-                    value="Eliminar"
-                  />
-                </center>
               </fieldset>
             </form>
           </div>
