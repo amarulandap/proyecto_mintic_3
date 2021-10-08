@@ -26,6 +26,15 @@ function NavbarComponent(props) {
                                     <li><Link to="/listProducts" className="dropdown-item" >List</Link></li>
                                 </ul>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sales
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><Link to="/ManageSales" className="dropdown-item" >Add</Link></li>
+                                    <li><Link to="/listProducts" className="dropdown-item" >List</Link></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>

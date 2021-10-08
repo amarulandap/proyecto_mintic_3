@@ -8,6 +8,7 @@ import NavbarComponent from './shared/components/navbar/NavbarComponent';
 import ListProducts from './ManageProducts/GestionProductos';
 import GestionVentas from './ManageProducts/GestionVentas';
 import FooterComponent from './shared/components/footer/footerComponent';
+import AddVentas from './ManageSales/AddVentas';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path="/usersForm" exact>
           <UsersForm />
+        </Route>
+        <Route path="/ManageSales" exact>
+          <AddVentas />
         </Route>
       </Switch>
       <FooterComponent/>
