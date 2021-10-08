@@ -85,7 +85,7 @@ function ListProducts(props) {
                     </div>
                 </div>
             </div>
-
+            <hr/>
         </Fragment>
     );
 }

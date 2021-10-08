@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavbarComponent from './shared/components/navbar/NavbarComponent';
 import ListProducts from './ManageProducts/GestionProductos';
 import GestionVentas from './ManageProducts/GestionVentas';
+import FooterComponent from './shared/components/footer/FooterComponent';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <UsersForm />
         </Route>
       </Switch>
+      <FooterComponent/>
     </Router>
   );
 }
