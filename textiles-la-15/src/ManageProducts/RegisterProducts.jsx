@@ -39,6 +39,7 @@ useEffect(()=>{
   getProducts();
 }, []);
 
+
   const enviar = () => {
     let datosForm = {
       'descripcion': descripcion,
@@ -49,6 +50,16 @@ useEffect(()=>{
     }
 
     setDatos(datosForm);
+    const addProducts = () => {
+      fetch("http://localhost:3001/add-product", {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(datosForm), // data can be `string` or {object}!
+        headers:{
+          'Content-Type': 'application/json'
+        }
+      })
+    }
+    addProducts();
     alert("Productos agregado correctamente")
   }
 
@@ -113,7 +124,9 @@ useEffect(()=>{
                       <input 
                       onChange={(e) => setFechaIngreso(e.target.value)}
                       type="date"  
-                      id="fechaIngreso" />
+                      id="fechaIngreso" 
+                      min="1997-01-01" max="2030-12-31"
+                      />
                     </div>
                   </div>
                   <br />
@@ -142,7 +155,7 @@ useEffect(()=>{
             </form>
           </div>
           <div className="col-8 col-sm-8 col-md-8 	col-lg-8 	col-xl-8 	col-xxl-8">
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
