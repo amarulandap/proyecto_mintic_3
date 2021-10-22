@@ -1,0 +1,12 @@
+.forbiden-style {
+    background-color: #FFFFFF;
+    font-size: 40px;
+    font-style: oblique;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    margin-bottom: 192px;
+    /*border-style: double;*/
+    text-align: center;
+    border-radius: 10px;
+}
