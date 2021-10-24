@@ -49,6 +49,27 @@ app.delete("/delete-register", async (request,response) => {
 }
 })
 
+app.get("/get-products", async (request, response) => {
+    const [rows, fields] = await connection.execute("SELECT * FROM productos");
+    console.log({ data: rows })
+    response.json({ data: rows });
+})
+
+
+app.post("/add-product", async (req, res) => {
+    try {
+        console.log(req.body)
+        const {descripcion, precio, stock, fechaIngreso, mRollos} = req.body;
+        await connection.execute(`INSERT INTO productos (Descripcion, Precio, Stock, FechaIngreso, MRollos) VALUES('${descripcion}', ${precio}, ${stock}, '${fechaIngreso}', ${mRollos})`);
+        res.json({status:"ok"})
+    }
+    catch (error) {
+        console.log(error);
+        res.json(error)
+    }
+    
+})
+
 
 app.listen(port, async () => {
     connection = await mysql.createConnection({
