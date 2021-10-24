@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import './ForbidenComponentStyle.css';
+
 
 const ForbidenComponent = () => {
     return (
         <div>
-            <h1>No tiene permiso para ingresar a esta zona</h1>
+           <h1 className="forbiden-style">PARA INICIAR DE CLICK EN LOGIN E INGRESE A SU CUENTA</h1> 
+           <h1 className="forbiden-style">SI YA INICIO SESIÓN VERIFIQUE SUS PERMISOS</h1>
         </div>
     )
 }
 
-export default ForbidenComponent
+export default ForbidenComponent;

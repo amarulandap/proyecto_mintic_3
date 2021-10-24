@@ -1,46 +1,40 @@
-import React, {Fragment} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import './UsersRegisterStyles.css';
+import ForbidenComponent from '../shared/components/forbiden/ForbidenComponent';
 
-function VerifyRegister() {
-
-    let identificationNumber = document.getElementById("txtIdIngreso").value;
-    let passRegisterUsers = document.getElementById("pssIngresoSistema").value;
-
-    alert(identificationNumber);
-    alert(passRegisterUsers);
-
-}
-
-
-function UsersRegister() {
-
-    return (
-        <Fragment>
+function UsersRegister () {     
+    if(localStorage.getItem("state") == 'Administrador'){
+        return (
             <div className="container-fluid">
-                <h1 id="title-ingreso" className="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-4 col-xxl-4 title_input">INGRESO SISTEMA DE GESTIÓN DE USUARIOS Y ROLES</h1>
+                <div className="row">
+                    <div className= "col">
+                        <h1 id="title-ingreso">INGRESO SISTEMA DE GESTIÓN DE USUARIOS Y ROLES</h1>
 
-                <form class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-4 col-xxl-4 style_form">
-                    <div className="mb-3">
-                        <label for="txtIdIngreso" className="form-label">Número de identificación</label>
-                        <input type="text" className="form-control" id="txtIdIngreso" placeholder="Ingrese su número de identificación sin espacios ni puntos" />
+                        <div className="style_form">
+                            <div className="mb-3">
+                                <label for="ingresarUsuario">Para ingresar un usuario al sistema:</label><br/>
+                                <Link id="ingresarUsuario" type="button" to="/UsersForm"  className="myButton nav-link">CLICK AQUÍ</Link>
+                            </div>
+                                <div className="mb-3">
+                                <label for="consultar">Para consultar la información del total de usuarios:</label>
+                                <Link id="consultar" type="button" to="/UsersInfo" className="myButton nav-link" >CLICK AQUÍ</Link> 
+                            </div>
+                            <div className="mb-3">
+                                <label for="consultar">Para actualizar o eliminar la información de un usuario:</label>
+                                <Link id="actualizar" type="button" to="/usersUpdate" className="myButton nav-link">CLICK AQUÍ</Link>
+                            </div>
+                            <div>
+                                <Link id="return" to="/" className="nav-link" >REGRESAR</Link>    
+                            </div>  
+                        </div>
                     </div>
-                    <div>
-                        <label for="pssIngresoSistema" className="form-label">Contraseña</label>
-                        <input type="password" className="form-control" id="pssIngresoSistema" placeholder="Ingrese su contraseña" />
-                    </div>
-                    <div className="col-12">
-                        <br/>
-                        <Link onClick={VerifyRegister} to="/UsersForm" id="btnIngresoSistema" className="btn btn-primary" aria-current="page">ENVIAR</Link>    
-                    </div>  
-                    <div>
-                        <br/>
-                        <a href="https://getbootstrap.com/">REGRESAR</a>
-                    </div> 
-                </form>
-            </div>
-        </Fragment>   
-    );
+                </div>
+            </div>      
+        ); 
+    }else{
+        return <ForbidenComponent />
+    }      
 }
 
 export default UsersRegister;
