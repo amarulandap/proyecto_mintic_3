@@ -1,6 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
+import './NavbarComponentStyle.css';
 
 function NavbarComponent(props) {
     const { loginWithRedirect } = useAuth0();
@@ -20,8 +21,7 @@ function NavbarComponent(props) {
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <Link to="/" className="nav-link active" aria-current="page" >Home</Link>
-                            {/* <Link to="/login" className="nav-link" >Login</Link> */}
-                            <a className="nav-link" onClick={() => loginWithRedirect()}>Log In</a>
+                            {/*<Link to="/login" className="nav-link" >Login</Link>*/}
                             <Link to="/register" className="nav-link" >Users</Link>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,11 +42,11 @@ function NavbarComponent(props) {
                                 </ul>
                             </li>
                         </ul>
-                        <a className="nav-link" onClick={() => logout({ returnTo: window.location.origin })}>Log out</a>
+                        {isAuthenticated ? null : <a className="btn btn-primary btn-log" onClick={() => loginWithRedirect()}>Login</a>}
+                        {isAuthenticated ?<a className="btn btn-primary btn-log" onClick={() => logout({ returnTo: window.location.origin })}>Logout</a> : null}
                     </div>
-                    
                     <form class="d-flex">
-                        <button class="btn btn-outline-success" type="submit">{isAuthenticated == true ? user.name : "User"}</button>
+                        <button class="btn btn-primary" type="">{isAuthenticated ? user.name : "User"}</button>
                     </form>
                 </div>
             </nav>
