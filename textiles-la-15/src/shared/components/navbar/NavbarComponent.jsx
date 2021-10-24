@@ -5,7 +5,9 @@ import { useAuth0 } from "@auth0/auth0-react";
 function NavbarComponent(props) {
     const { loginWithRedirect } = useAuth0();
     const { logout } = useAuth0();
+    const { user, isAuthenticated } = useAuth0();
     let title = props.title;
+
     return (
         <Fragment>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,7 +22,6 @@ function NavbarComponent(props) {
                             <Link to="/" className="nav-link active" aria-current="page" >Home</Link>
                             {/* <Link to="/login" className="nav-link" >Login</Link> */}
                             <a className="nav-link" onClick={() => loginWithRedirect()}>Log In</a>
-                            <a className="nav-link" onClick={() => logout({ returnTo: window.location.origin })}>Log out</a>
                             <Link to="/register" className="nav-link" >Users</Link>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,7 +42,12 @@ function NavbarComponent(props) {
                                 </ul>
                             </li>
                         </ul>
+                        <a className="nav-link" onClick={() => logout({ returnTo: window.location.origin })}>Log out</a>
                     </div>
+                    
+                    <form class="d-flex">
+                        <button class="btn btn-outline-success" type="submit">{isAuthenticated == true ? user.name : "User"}</button>
+                    </form>
                 </div>
             </nav>
         </Fragment>
