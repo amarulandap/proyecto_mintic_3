@@ -21,7 +21,6 @@ function NavbarComponent(props) {
                         <ul class="navbar-nav">
                             <Link to="/" className="nav-link active" aria-current="page" >Home</Link>
                             {/* <Link to="/login" className="nav-link" >Login</Link> */}
-                            <a className="nav-link" onClick={() => loginWithRedirect()}>Log In</a>
                             <Link to="/register" className="nav-link" >Users</Link>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,7 +41,8 @@ function NavbarComponent(props) {
                                 </ul>
                             </li>
                         </ul>
-                        <a className="nav-link" onClick={() => logout({ returnTo: window.location.origin })}>Log out</a>
+                        {isAuthenticated ? null : <a className="nav-link" onClick={() => loginWithRedirect()}>Login</a>}
+                        {isAuthenticated ? <a className="nav-link" onClick={() => logout({ returnTo: window.location.origin })}>Logout</a>: null}
                     </div>
                     
                     <form class="d-flex">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useAuth0 } from "@auth0/auth0-react";
 import './App.css';
 import RegisterProducts from './ManageProducts/RegisterProducts';
 import UsersRegister from './UsersRegister/UsersRegister';
@@ -9,8 +10,11 @@ import ListProducts from './ManageProducts/GestionProductos';
 import GestionVentas from './ManageProducts/GestionVentas';
 import FooterComponent from './shared/components/footer/footerComponent';
 import AddVentas from './ManageSales/AddVentas';
+import ForbidenComponent from './shared/components/forbiden/ForbidenComponent';
+
 
 function App() {
+  const { isAuthenticated } = useAuth0();
   return (
     <Router>
       <NavbarComponent title="Textiles la 15" />
@@ -25,7 +29,7 @@ function App() {
           <UsersRegister />
         </Route>
         <Route path="/registerProducts" exact>
-          <RegisterProducts />
+          {isAuthenticated ? <RegisterProducts />: <ForbidenComponent/>}
         </Route>
         <Route path="/listProducts" exact>
           <ListProducts/>
@@ -38,6 +42,9 @@ function App() {
         </Route>
         <Route path="/ManageSales" exact>
           <AddVentas />
+        </Route>
+        <Route path="/forbiden" exact>
+          <ForbidenComponent/>
         </Route>
       </Switch>
       <FooterComponent/>

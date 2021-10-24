@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import "./RegisterProductsStyles.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 function RegisterProducts(props) {
@@ -10,6 +11,8 @@ function RegisterProducts(props) {
   const [fechaIngreso, setFechaIngreso] = useState(new Date);
   const [mRollos, setMRollos] = useState(0);
   const [datos, setDatos] = useState("");
+
+  const { user, isAuthenticated } = useAuth0();
 
   const [products, setProducts] = useState([]);
   const getProducts = async () => {
