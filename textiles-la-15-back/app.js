@@ -1,4 +1,3 @@
-const { request } = require("express");
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -72,12 +71,19 @@ app.post("/add-product", async (req, res) => {
 
 
 app.listen(port, async () => {
-    connection = await mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'pipe1981',
-    database: 'textiles_la_15',
-    Promise: bluebird
-  });
-    console.log("El servidor esta escuchando")
-})
+    try {
+        connection = await mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: '123456',
+            database: 'textiles_la_15',
+            Promise: bluebird
+        });
+        console.log("Server running on port: " + port);
+    } catch (error) {
+        console.log(error);
+        res.json(error)
+    }
+    
+    
+});
