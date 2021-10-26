@@ -20,6 +20,14 @@ app.get("/get-register", async (request,response)=> {
     response.json(rows[0]);
 })
 
+app.get("/search-products", async (request,response)=> {
+    const busqueda = request.query.busqueda;
+    const valorBusqueda = request.query.valorBusqueda;
+    const [rows, fields] = await connection.execute(`SELECT * FROM productos WHERE ${busqueda}='${valorBusqueda}'`);
+
+    response.json({data: rows});
+})
+
 app.post("/post-register", async (request,response) => {
     try{const {IDusuarios, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, DireccionDomicilio, TelefonoFijo, TelefonoCelular, FechaIngreso, Email, Estado, Rol} = request.body;
     await connection.execute(`INSERT INTO Usuarios (IDusuarios, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, DireccionDomicilio, TelefonoFijo, TelefonoCelular, FechaIngreso, Email, Estado, Rol) VALUES ('${IDusuarios}','${PrimerNombre}', '${SegundoNombre}', '${PrimerApellido}', '${SegundoApellido}', '${DireccionDomicilio}', '${TelefonoFijo}', '${TelefonoCelular}', '${FechaIngreso}', '${Email}', '${Estado}', '${Rol}')`);
