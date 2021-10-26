@@ -32,7 +32,7 @@ function App() {
            {isAuthenticated ? <UsersRegister /> : <ForbidenComponent />}
         </Route>
         <Route path="/registerProducts" exact>
-          {isAuthenticated ? <RegisterProducts /> :<ForbidenComponent />}
+          <RegisterProducts />
         </Route>
         <Route path="/listProducts" exact>
           {isAuthenticated ? <ListProducts/> : <ForbidenComponent />}
