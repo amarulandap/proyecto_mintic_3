@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './HomeStyles.css';
 import { useAuth0 } from "@auth0/auth0-react";
-import ForbidenComponent from '../shared/components/forbiden/ForbidenComponent';
 
 function Home() {
 
@@ -27,6 +26,11 @@ function Home() {
             if(userData.Rol == "Administrador"){
                 setValidUser(true);
                 localStorage.setItem("state", 'Administrador');
+            }
+            else if(userData.Rol == "Vendedor"){
+                setValidUser(true);
+                localStorage.setItem("state", 'Vendedor');
+            
             }else{
                 setValidUser(false);
             }
@@ -41,15 +45,16 @@ function Home() {
 
     return(
         <div>
-            {validUser ? <div>
                 <h1 className="home-style">TEXTILES LA 15</h1>
                 <h2 className="home-style">BIENVENIDO AL SISTEMA DE ADMINISTRACIÓN  Y VENTAS</h2>
-            </div> : <ForbidenComponent />}
         </div>
     );
   
 }
 
 export default Home;
+
+
+
 
 
