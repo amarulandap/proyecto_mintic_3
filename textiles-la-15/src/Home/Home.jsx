@@ -24,7 +24,7 @@ function Home() {
         }
     
         if (userData){
-            if(userData.Rol === "Administrador"){
+            if(userData.Rol == "Administrador"){
                 setValidUser(true);
                 localStorage.setItem("state", 'Administrador');
             }else{

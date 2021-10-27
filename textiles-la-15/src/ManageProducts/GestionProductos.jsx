@@ -1,9 +1,44 @@
-import React, { Fragment,} from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import "./producto.css";
 import { Link } from "react-router-dom";
 
 
 function ListProducts(props) {
+    const [opcion, setOpcion] = useState("");
+    const [valueOpcion, setValueOpcion] = useState("");
+    console.log(opcion);
+    console.log(valueOpcion);
+
+    const [products, setProducts] = useState([]);
+    const getProducts = async () => {
+        try {
+            const response = await fetch(`http://localhost:3001/search-products?busqueda=${opcion}&valorBusqueda=${valueOpcion}`);
+            const jsonResponse = await response.json();
+            const responseProducts = jsonResponse.data;
+            const listProducts = responseProducts.map((product) =>
+                <tr>
+                    <th scope="row">{product.Id}</th>
+                    <td>{product.Descripcion}</td>
+                    <td>{product.Precio}</td>
+                    <td>{product.Stock}</td>
+                    <td>{product.FechaIngreso}</td>
+                    <td>{product.MRollos}</td>
+                </tr>
+            );
+            setProducts(listProducts)
+        }
+        catch (error) {
+            console.log(error)
+        }
+
+    }
+
+    useEffect(() => {
+        getProducts();
+      }, [opcion, valueOpcion]);
+
+
+
     return (
         <Fragment>
             <div class="container-fluid" id="form-product">
@@ -17,23 +52,24 @@ function ListProducts(props) {
 
                             <label>Seleccione el parametro para la consulta</label>
 
-                            <select name="opciones">
-                                <option value="Parametro de busqueda">
+                            <select onChange={(e) => setOpcion(e.target.value)} name="opciones" defaultValue="Id">
+                                <option key="Id" value="Id">
                                     Código de producto
                                 </option>
-                                <option value="Parametro de busqueda">
+                                <option key="Descripcion" value="Descripcion">
                                     Descripción del producto
                                 </option>
-                                <option value="Parametro de busqueda">
+                                {/* <option value="Parametro de busqueda">
                                     Identificación del clientes{" "}
-                                </option>
+                                </option> */}
                             </select>
                             <br />
                             <br />
 
                             <label>Ingrese parametro: </label>
-                            <input type="text" />
-                            <button class="btn btn-primary"> Consultar </button>
+                            <input type="text" onChange={(e) => setValueOpcion(e.target.value)} />
+                            <a class="btn btn-primary"
+                                onClick={getProducts}> Consultar </a>
                             <br />
                             <br />
 
@@ -80,12 +116,30 @@ function ListProducts(props) {
                                 <option value="1">Disponible</option>
                                 <option value="2">No Disponible</option>
                             </select>
-                            <Link to="/GestionVentas"  className="btn btn-primary" aria-current="page" >Generar reporte</Link>
+                            <Link to="/GestionVentas" className="btn btn-primary" aria-current="page" >Generar reporte</Link>
                         </form>
                     </div>
+                    <div className="col-6 col-sm-6 ">
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Stock</th>
+                                <th scope="col">Fecha Ingreso</th>
+                                <th scope="col">Metros por rollo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {products}
+                        </tbody>
+                    </table>
                 </div>
+                </div>
+                
             </div>
-            <hr/>
+            <hr />
         </Fragment>
     );
 }
