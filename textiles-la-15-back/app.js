@@ -10,20 +10,20 @@ app.use(express.json());
 app.use(cors({origin: true}));
 
 app.get("/get-registers", async (request,response) => {
-    const [rows, fields] = await connection.execute("SELECT * FROM usuarios");
+    const [rows, fields] = await connection.execute("SELECT * FROM Usuarios");
     response.json({data: rows});
 })
 
 app.get("/get-register", async (request,response)=> {
     const email = request.query.email;
-    const [rows, fields] = await connection.execute(`SELECT * FROM usuarios WHERE Email='${email}'`);
+    const [rows, fields] = await connection.execute(`SELECT * FROM Usuarios WHERE Email='${email}'`);
     response.json(rows[0]);
 })
 
 app.get("/search-products", async (request,response)=> {
     const busqueda = request.query.busqueda;
     const valorBusqueda = request.query.valorBusqueda;
-    const [rows, fields] = await connection.execute(`SELECT * FROM productos WHERE ${busqueda}='${valorBusqueda}'`);
+    const [rows, fields] = await connection.execute(`SELECT * FROM Productos WHERE ${busqueda}='${valorBusqueda}'`);
 
     response.json({data: rows});
 })
@@ -40,7 +40,7 @@ app.post("/post-register", async (request,response) => {
 
 app.put("/put-register", async (request,response) => {
     try{const {IDusuarios, Estado, Rol} = request.body;
-    const [rows, fields] = await connection.execute(`UPDATE usuarios SET Estado='${Estado}', Rol='${Rol}' WHERE IDusuarios = '${IDusuarios}'`);
+    const [rows, fields] = await connection.execute(`UPDATE Usuarios SET Estado='${Estado}', Rol='${Rol}' WHERE IDusuarios = '${IDusuarios}'`);
     response.json({status: "ok"});
     }catch (error){ 
     response.json(error);
@@ -49,7 +49,7 @@ app.put("/put-register", async (request,response) => {
 
 app.delete("/delete-register", async (request,response) => {
     try{ const {IDusuarios} = request.body;
-    const [rows, fields] = await connection.execute('DELETE FROM usuarios WHERE IDusuarios = ?', [IDusuarios]);
+    const [rows, fields] = await connection.execute('DELETE FROM Usuarios WHERE IDusuarios = ?', [IDusuarios]);
     response.json({status: "ok"});
 }catch{
     response.json(error);
@@ -57,7 +57,7 @@ app.delete("/delete-register", async (request,response) => {
 })
 
 app.get("/get-products", async (request, response) => {
-    const [rows, fields] = await connection.execute("SELECT * FROM productos");
+    const [rows, fields] = await connection.execute("SELECT * FROM Productos");
     console.log({ data: rows })
     response.json({ data: rows });
 })
@@ -67,7 +67,7 @@ app.post("/add-product", async (req, res) => {
     try {
         console.log(req.body)
         const {descripcion, precio, stock, fechaIngreso, mRollos} = req.body;
-        await connection.execute(`INSERT INTO productos (Descripcion, Precio, Stock, FechaIngreso, MRollos) VALUES('${descripcion}', ${precio}, ${stock}, '${fechaIngreso}', ${mRollos})`);
+        await connection.execute(`INSERT INTO Productos (Descripcion, Precio, Stock, FechaIngreso, MRollos) VALUES('${descripcion}', ${precio}, ${stock}, '${fechaIngreso}', ${mRollos})`);
         res.json({status:"ok"})
     }
     catch (error) {
