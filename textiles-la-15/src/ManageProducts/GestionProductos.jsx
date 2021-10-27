@@ -73,36 +73,21 @@ function ListProducts(props) {
                             <br />
                             <br />
 
-                            <table class=" table table-success table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"># identificación de producto</th>
-                                        <th scope="col">Descripción</th>
-                                        <th scope="col">Valor Unitario</th>
-                                        <th scope="col">Estado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Cuerotex</td>
-                                        <td>30.000</td>
-                                        <td>Disponible</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Poliester</td>
-                                        <td>20.000</td>
-                                        <td>No Disponible</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Lycra</td>
-                                        <td>30.000</td>
-                                        <td>Disponible</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <table className="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Stock</th>
+                                <th scope="col">Fecha Ingreso</th>
+                                <th scope="col">Metros por rollo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {products}
+                        </tbody>
+                    </table>
 
                             <label>Fecha de inicio: </label>
                             <input type="date" />
@@ -120,22 +105,8 @@ function ListProducts(props) {
                         </form>
                     </div>
                     <div className="col-6 col-sm-6 ">
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Descripcion</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Stock</th>
-                                <th scope="col">Fecha Ingreso</th>
-                                <th scope="col">Metros por rollo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {products}
-                        </tbody>
-                    </table>
-                </div>
+                    
+                    </div>
                 </div>
                 
             </div>
