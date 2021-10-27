@@ -1,4 +1,5 @@
 const express = require("express");
+const morgan = require('morgan');
 const cors = require("cors");
 const app = express();
 const mysql = require('mysql2/promise');
@@ -8,6 +9,8 @@ let connection;
 
 app.use(express.json());
 app.use(cors({origin: true}));
+app.use(express.urlencoded({extend: false})) //método para entender los datos del formulario, es false porque no hay imágenes
+
 
 app.get("/get-registers", async (request,response) => {
     const [rows, fields] = await connection.execute("SELECT * FROM usuarios");
@@ -68,6 +71,53 @@ app.post("/add-product", async (req, res) => {
     }
     
 })
+
+//Ventas
+app.post("/add-ventas", async (req, res) => {
+    try {
+        const ventaAdd = req.body;
+        await connection.query(`INSERT INTO ventas set ?`,[ventaAdd]);
+        res.json({status:"Ok"})
+    }
+    catch (err) {
+        res.json(err);
+    }
+})
+
+app.get("/get-ventas", async (req, res) => {
+    try {
+        const [rows, fields] = await connection.query("SELECT * FROM ventas");
+        res.json({data: rows})
+    }
+    catch (err) {
+        res.json(err);
+    }
+})
+
+
+app.get("/update-ventas/:IDVenta", async (req, res) => {   
+    try{ 
+    const {IDVenta} =req.params;
+    const [rows, fields] = await connection.query('SELECT * FROM ventas WHERE IDVenta = ?', [IDVenta])
+    res.json({data: rows})
+}
+    catch (err) {
+        res.json(err);
+    }
+})
+
+
+app.get("/buscar-idVenta/:idVenta", async (req, res) => {
+    try{
+    const [rows, fields] = await connection.execute(`SELECT * FROM ventas WHERE idVenta = ?`, [req.params.idVenta]);
+    console.log({ data: rows })
+    res.json({data: rows});
+    }
+    catch(error) {
+        console.log(error);
+        res.json(error)
+    }
+}) 
 
 
 app.listen(port, async () => {

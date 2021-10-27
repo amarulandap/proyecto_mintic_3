@@ -10,7 +10,10 @@ import NavbarComponent from './shared/components/navbar/NavbarComponent';
 import ListProducts from './ManageProducts/GestionProductos';
 import GestionVentas from './ManageProducts/GestionVentas';
 import FooterComponent from './shared/components/footer/footerComponent';
-import AddVentas from './ManageSales/AddVentas';
+import RegisterVentas from './ManageSales/RegisterVentas';
+import ListVentas from './ManageSales/ListVentas';
+import GestVentas from './ManageSales/GestVentas';
+
 import ForbidenComponent from './shared/components/forbiden/ForbidenComponent';
 import Home from './Home/Home';
 import { useAuth0 } from "@auth0/auth0-react";
@@ -55,8 +58,14 @@ function App() {
         <Route path="/usersInfo" exact>
           <UsersInfo />
         </Route>
-        <Route path="/ManageSales" exact>
-          {isAuthenticated ? <AddVentas /> : <ForbidenComponent />} 
+        <Route path="/RegisterVentas" exact>
+          {isAuthenticated ? <RegisterVentas /> : <ForbidenComponent />} 
+        </Route>
+        <Route path="/ListVentas" exact>
+          {isAuthenticated ? <ListVentas /> : <ForbidenComponent />} 
+        </Route>
+        <Route path="/GestVentas" exact>
+          <GestVentas />
         </Route>
         <Route path="/forbiden" exact>
           <ForbidenComponent />
