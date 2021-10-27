@@ -75,6 +75,16 @@ app.put("/put-register", async (request,response) => {
 }
 })
 
+/*Endpoint para actualizar la información de los productos*/
+app.put("/put-products", async (request,response) => {
+    try{const {Id, Precio, Stock, FechaIngreso, Mrollos} = request.body;
+    const [rows, fields] = await connection.execute(`UPDATE Productos SET Precio='${Precio}', Stock='${Stock}', FechaIngreso='${FechaIngreso}', MRollos='${Mrollos}' WHERE Id='${Id}'`);
+    response.json({status: "ok"});
+    }catch (error){ 
+    response.json(error);
+}
+})
+
 /*Endpoint para eliminar usuarios*/
 app.delete("/delete-register", async (request,response) => {
     try{ const {IDusuarios} = request.body;
