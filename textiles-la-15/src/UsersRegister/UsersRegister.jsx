@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './UsersRegisterStyles.css';
-import ForbidenComponent from '../shared/components/forbiden/ForbidenComponent';
+import { useAuth0 } from "@auth0/auth0-react";
+import { Redirect } from 'react-router';
 
-function UsersRegister () {     
-    if(localStorage.getItem("state") == 'Administrador'){
+function UsersRegister () {   
+    const {isAuthenticated } = useAuth0();
+    
+    if(localStorage.getItem("state") == 'Administrador' && isAuthenticated){
         return (
             <div className="container-fluid">
                 <div className="row">
@@ -33,7 +36,7 @@ function UsersRegister () {
             </div>      
         ); 
     }else{
-        return <ForbidenComponent />
+        return <Redirect to="/"></Redirect>
     }      
 }
 
