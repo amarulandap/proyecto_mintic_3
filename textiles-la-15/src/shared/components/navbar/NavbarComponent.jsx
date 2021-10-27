@@ -18,6 +18,7 @@ function NavbarComponent(props) {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
+<<<<<<< HEAD
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <Link to="/" className="nav-link active" aria-current="page" >Home</Link>
@@ -39,14 +40,42 @@ function NavbarComponent(props) {
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li><Link to="/ManageSales" className="dropdown-item" >Add</Link></li>
                                     <li><Link to="/listProducts" className="dropdown-item" >List</Link></li>
+=======
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <Link to="/" className="nav-link active" aria-current="page" >Página Principal</Link>
+                            {/*<Link to="/login" className="nav-link" >Login</Link>*/}
+                            <Link to="/register" className="nav-link" >Usuarios</Link>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Productos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><Link to="/registerProducts" className="dropdown-item" >Agregar Productos</Link></li>
+                                    <li><Link to="/listProducts" className="dropdown-item" >Editar Productos</Link></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Ventas
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><Link to="/ManageSales" className="dropdown-item" >Ingresar Venta</Link></li>
+                                    <li><Link to="/listProducts" className="dropdown-item" >Editar Venta</Link></li>
+>>>>>>> release_Andres
                                 </ul>
                             </li>
                         </ul>
-                        {isAuthenticated ? null : <a className="btn btn-primary btn-log" onClick={() => loginWithRedirect()}>Login</a>}
-                        {isAuthenticated ?<a className="btn btn-primary btn-log" onClick={() => logout({ returnTo: window.location.origin })}>Logout</a> : null}
+                        {isAuthenticated ? null : <a className="btn btn-primary btn-log" onClick={() => loginWithRedirect()}>Iniciar Sesión</a>}
+                        {isAuthenticated ?<a className="btn btn-primary btn-log" onClick={() => logout({ returnTo: window.location.origin })}>Cerrar Sesión</a> : null}
                     </div>
+<<<<<<< HEAD
                     <form className="d-flex">
                         <a className="btn btn-primary" type="">{isAuthenticated ? user.name : "User"}</a>
+=======
+                    <form class="d-flex">
+                        <button class="btn btn-primary" type="">{isAuthenticated ? user.name : "Usuario"}</button>
+>>>>>>> release_Andres
                     </form>
                 </div>
             </nav>

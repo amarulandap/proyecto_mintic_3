@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     background-color: #6495ed;
     font-family: Century;
@@ -40,3 +41,57 @@ header{
   
 
 
+=======
+body{
+    background-color: #6495ed;
+    font-family: Century;
+}
+
+form {
+    background-color: #deb887;
+    border-radius: 15px;
+    margin-bottom: 13px;
+}
+form #form-product{
+    background-color: #deb887;
+    padding: 5em;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+div #details {
+    background-color: green;
+    width: 200px;
+    height: auto;
+}
+
+div #row{
+    margin: 3px;
+    border: #6495ed;
+}
+
+header{
+    display:flex;
+    justify-content: space-around;
+    background-color: blue;
+    color:white;
+}
+
+#logo{
+    width: 20%;
+
+}
+
+.actualizar {
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.margen-superior {
+    margin-top: 10px;
+}
+
+.actualizadores {
+    margin-top: 10px;
+}
+>>>>>>> release_Andres
