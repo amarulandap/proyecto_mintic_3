@@ -12,6 +12,7 @@ import GestionVentas from './ManageProducts/GestionVentas';
 import FooterComponent from './shared/components/footer/footerComponent';
 import ListVentas from './ManageSales/ListVentas';
 import GestVentas from './ManageSales/GestVentas';
+import RegisterVentas from './ManageSales/RegisterVentas';
 
 import ForbidenComponent from './shared/components/forbiden/ForbidenComponent';
 import Home from './Home/Home';
@@ -46,9 +47,6 @@ function App() {
         <Route path="/listProducts" exact>
           <ListProducts/>
         </Route>
-        <Route path="/GestionVentas" exact>
-          <GestionVentas />
-        </Route>
         <Route path="/usersForm" exact>
           <UsersForm />
         </Route>
@@ -58,8 +56,11 @@ function App() {
         <Route path="/usersInfo" exact>
           <UsersInfo />
         </Route>
-        <Route path="/ManageSales" exact>
+        <Route path="/ListVentas" exact>
           {isAuthenticated ? <ListVentas /> : <Home />} 
+        </Route>
+        <Route path="/RegisterVentas" exact>
+          {isAuthenticated ? <RegisterVentas /> : <Home />} 
         </Route>
       </Switch>
       <FooterComponent/>
