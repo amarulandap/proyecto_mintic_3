@@ -10,11 +10,15 @@ import NavbarComponent from './shared/components/navbar/NavbarComponent';
 import ListProducts from './ManageProducts/GestionProductos';
 import GestionVentas from './ManageProducts/GestionVentas';
 import FooterComponent from './shared/components/footer/footerComponent';
-import AddVentas from './ManageSales/AddVentas';
+import ListVentas from './ManageSales/ListVentas';
+import GestVentas from './ManageSales/GestVentas';
+
+import ForbidenComponent from './shared/components/forbiden/ForbidenComponent';
 import Home from './Home/Home';
 import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
+
   const {isAuthenticated } = useAuth0();
 
   return (
@@ -55,7 +59,7 @@ function App() {
           <UsersInfo />
         </Route>
         <Route path="/ManageSales" exact>
-          {isAuthenticated ? <AddVentas /> : <Home />} 
+          {isAuthenticated ? <ListVentas /> : <Home />} 
         </Route>
       </Switch>
       <FooterComponent/>

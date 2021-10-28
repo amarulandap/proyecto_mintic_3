@@ -1,14 +1,13 @@
+
 import React, { Fragment, useState } from "react";
 import { Link } from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
 import './NavbarComponentStyle.css';
-
 function NavbarComponent(props) {
     const { loginWithRedirect } = useAuth0();
     const { logout } = useAuth0();
     const { user, isAuthenticated } = useAuth0();
     let title = props.title;
-
     return (
         <Fragment>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,7 +37,7 @@ function NavbarComponent(props) {
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li><Link to="/ManageSales" className="dropdown-item" >Ingresar Venta</Link></li>
-                                    <li><Link to="/listProducts" className="dropdown-item" >Editar Venta</Link></li>
+                                    <li><Link to="/ListVentas" className="dropdown-item" >Editar Venta</Link></li>
                                 </ul>
                             </li>
                         </ul>
@@ -52,7 +51,5 @@ function NavbarComponent(props) {
             </nav>
         </Fragment>
     )
-
 }
-
 export default NavbarComponent;
