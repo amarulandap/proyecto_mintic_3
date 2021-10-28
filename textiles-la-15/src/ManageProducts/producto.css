@@ -5,10 +5,14 @@ body{
 
 form {
     background-color: #deb887;
+    border-radius: 15px;
+    margin-bottom: 13px;
 }
 form #form-product{
     background-color: #deb887;
     padding: 5em;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 div #details {
@@ -34,9 +38,15 @@ header{
 
 }
 
+.actualizar {
+    padding: 15px;
+    margin-top: 10px;
+}
 
-    
+.margen-superior {
+    margin-top: 10px;
+}
 
-  
-
-
+.actualizadores {
+    margin-top: 10px;
+}
