@@ -184,7 +184,7 @@ function ListProducts(props) {
                                         <div className="col-sm-4">
                                             <label>Fecha de ingreso: </label>
                                         </div>
-                                        <div>
+                                        <div className="col-sm-8">
                                         <input type="date" className="actualizadores" name="FechaIngreso" onChange={(e)=>setInputFechaIngreso(e.target.value)} />
                                         </div>
                                     </div>
@@ -195,7 +195,7 @@ function ListProducts(props) {
                                         <div className="col-sm-4">
                                             <label>Metros por rollo: </label>
                                         </div>
-                                        <div>
+                                        <div className="col-sm-8">
                                         <input type="text" className="actualizadores" name="NumeroRollos" onChange={(e)=>setInputNumeroRollos(e.target.value)} />
                                         </div>
                                     </div>
