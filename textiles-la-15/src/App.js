@@ -44,6 +44,9 @@ function App() {
         <Route path="/GestionVentas" exact>
           <GestionVentas /> 
         </Route>
+        <Route path="/GestVentas" exact>
+          <GestVentas /> 
+        </Route>
         <Route path="/listProducts" exact>
           <ListProducts/>
         </Route>
