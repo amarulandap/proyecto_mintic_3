@@ -36,7 +36,7 @@ function NavbarComponent(props) {
                                     Ventas
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><Link to="/ManageSales" className="dropdown-item" >Ingresar Venta</Link></li>
+                                    <li><Link to="/RegisterVentas" className="dropdown-item" >Ingresar Venta</Link></li>
                                     <li><Link to="/ListVentas" className="dropdown-item" >Editar Venta</Link></li>
                                 </ul>
                             </li>
