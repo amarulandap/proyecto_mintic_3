@@ -1,5 +1,4 @@
 const express = require("express");
-const morgan = require('morgan');
 const cors = require("cors");
 const app = express();
 const mysql = require('mysql2/promise');
@@ -9,7 +8,6 @@ let connection;
 
 app.use(express.json());
 app.use(cors({origin: true}));
-app.use(express.urlencoded({extend: false})) //método para entender los datos del formulario, es false porque no hay imágenes
 
 
 /*Endpoint para obtener el listado de todos los usuarios*/

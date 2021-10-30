@@ -8,12 +8,12 @@ import { Redirect } from 'react-router';
 function ListProducts(props) {
     const { isAuthenticated } = useAuth0();
 
-    const [inputIdProducto, setInputIdProducto] = useState ("");
+    const [inputIdProducto, setInputIdProducto] = useState("");
     /*const [inputDescripcion, setInputDescrpcion] = useState ("");*/
-    const [inputPrecio, setInputPrecio] = useState ("");
-    const [inputStock, setInputStock] = useState ("");
-    const [inputFechaIngreso, setInputFechaIngreso] = useState ("");
-    const [inputNumeroRollos, setInputNumeroRollos] = useState ("");
+    const [inputPrecio, setInputPrecio] = useState("");
+    const [inputStock, setInputStock] = useState("");
+    const [inputFechaIngreso, setInputFechaIngreso] = useState("");
+    const [inputNumeroRollos, setInputNumeroRollos] = useState("");
 
     const [datos, setDatos] = useState("");
     const [users, setUsers] = useState("");
@@ -35,6 +35,7 @@ function ListProducts(props) {
                     <td>{product.Stock}</td>
                     <td>{product.FechaIngreso}</td>
                     <td>{product.MRollos}</td>
+                    <td>{product.Stock == 0 ? "No disponible": "Disponible"}</td>
                 </tr>
             );
             setProducts(listProducts)
@@ -47,7 +48,7 @@ function ListProducts(props) {
 
     useEffect(() => {
         getProducts();
-      }, [opcion, valueOpcion]);
+    }, [opcion, valueOpcion]);
 
     const enviarActualizar = () => {
         let datosForm = {
@@ -55,8 +56,8 @@ function ListProducts(props) {
             /*'Descripcion': inputDescripcion,*/
             'Precio': inputPrecio,
             'Stock': inputStock,
-            'FechaIngreso':inputFechaIngreso,
-            'Mrollos':inputNumeroRollos
+            'FechaIngreso': inputFechaIngreso,
+            'Mrollos': inputNumeroRollos
         }
         setDatos(datosForm);
         const updateUsers = () => {
@@ -72,7 +73,7 @@ function ListProducts(props) {
         alert("Producto actualizado correctamente")
     }
 
-    if (localStorage.getItem("state") == 'Administrador' && isAuthenticated){
+    if (localStorage.getItem("state") == 'Administrador' && isAuthenticated) {
         return (
             <Fragment>
                 <div className="container-fluid" id="form-product">
@@ -86,56 +87,43 @@ function ListProducts(props) {
 
                                 <label>Seleccione el parametro para la consulta</label>
 
-                                <select onChange={(e) => setOpcion(e.target.value)} name="opciones" defaultValue="Id">
-                                <option key="Id" value="Id">
-                                    Código de producto
-                                </option>
-                                <option key="Descripcion" value="Descripcion">
-                                    Descripción del producto
-                                </option>
-                                {/* <option value="Parametro de busqueda">
+                                <select onChange={(e) => setOpcion(e.target.value)} name="opciones" >
+                                    <option selected>Elija una opción</option>
+                                    <option key="Id" value="Id">
+                                        Código de producto
+                                    </option>
+                                    <option key="Descripcion" value="Descripcion">
+                                        Descripción del producto
+                                    </option>
+                                    {/* <option value="Parametro de busqueda">
                                     Identificación del clientes{" "}
                                 </option> */}
-                            </select>
+                                </select>
                                 <br />
                                 <br />
 
                                 <label>Ingrese parametro: </label>
-                            <input type="text" onChange={(e) => setValueOpcion(e.target.value)} />
-                            <a class="btn btn-primary"
-                                onClick={getProducts}> Consultar </a>
-                            <br />
-                            <br />
+                                <input type="text" onChange={(e) => setValueOpcion(e.target.value)} />
 
-                            <table className="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Descripcion</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Stock</th>
-                                <th scope="col">Fecha Ingreso</th>
-                                <th scope="col">Metros por rollo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {products}
-                        </tbody>
-                    </table>
-
-                                <label>Fecha de inicio: </label>
-                                <input type="date" />
-                                <label>Fecha de fin: </label>
-                                <input type="date" name="" id="" />
                                 <br />
                                 <br />
-                                <label for="Estado">Estado: </label>
-                                <select name="Estado" id="Disponibilidad">
-                                    <option selected>Seleccione una option</option>
-                                    <option value="1">Disponible</option>
-                                    <option value="2">No Disponible</option>
-                                </select>
-                                <Link to="/GestionVentas"  className="btn btn-primary" aria-current="page" >Generar reporte</Link>
+
+                                <table className="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Id</th>
+                                            <th scope="col">Descripcion</th>
+                                            <th scope="col">Precio</th>
+                                            <th scope="col">Stock</th>
+                                            <th scope="col">Fecha Ingreso</th>
+                                            <th scope="col">Metros por rollo</th>
+                                            <th scope="col">Disponibilidad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {products}
+                                    </tbody>
+                                </table>
                             </form>
                         </div>
                         <div class="col-6 col-sm-6">
@@ -144,39 +132,63 @@ function ListProducts(props) {
                                     <h1> Actualización de productos </h1>
                                     <br />
                                 </center>
-                                <div>
-                                    <label>Id del producto: </label>
-                                    <input type="text" className="actualizadores" name="IdProducto" onChange={(e)=>setInputIdProducto(e.target.value)} />
+                                <div className="row">
+                                    <div className="col-sm-4">
+                                        <label>Id del producto: </label>
+                                    </div>
+                                    <div className="col-sm-8">
+                                        <input type="text" className="actualizadores" name="IdProducto" onChange={(e) => setInputIdProducto(e.target.value)} />
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>Precio del producto: </label>
-                                    <input type="text" className="actualizadores" name="Precio" onChange={(e)=>setInputPrecio(e.target.value)} />
+                                <br />
+                                <div className="row">
+                                    <div className="col-sm-4">
+                                        <label>Precio del producto: </label>
+                                    </div>
+                                    <div className="col-sm-8">
+                                        <input type="text" className="actualizadores" name="Precio" onChange={(e) => setInputPrecio(e.target.value)} />
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>Stock: </label>
-                                    <input type="text" className="actualizadores" name="Stock" onChange={(e)=>setInputStock(e.target.value)} />
+                                <br />
+                                <div className="row">
+                                    <div className="col-sm-4">
+                                        <label>Stock: </label>
+                                    </div>
+                                    <div className="col-sm-8">
+                                        <input type="text" className="actualizadores" name="Stock" onChange={(e) => setInputStock(e.target.value)} />
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>Fecha de ingreso: </label>
-                                    <input type="date" className="actualizadores" name="FechaIngreso" onChange={(e)=>setInputFechaIngreso(e.target.value)} />
+                                <br />
+                                <div className="row">
+                                    <div className="col-sm-4">
+                                        <label>Fecha de ingreso: </label>
+                                    </div>
+                                    <div className="col-sm-8">
+                                        <input type="date" className="actualizadores" name="FechaIngreso" onChange={(e) => setInputFechaIngreso(e.target.value)} />
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>Metros por rollo: </label>
-                                    <input type="text" className="actualizadores" name="NumeroRollos" onChange={(e)=>setInputNumeroRollos(e.target.value)} />
+                                <br />
+                                <div className="row">
+                                    <div className="col-sm-4">
+                                        <label>Metros por rollo: </label>
+                                    </div>
+                                    <div className="col-sm-8">
+                                        <input type ="text" className="actualizadores" name="NumeroRollos" onChange={(e) => setInputNumeroRollos(e.target.value)} />
+                                    </div>
+                                    <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-lx-3 col-xxl-3">
+                                    <button id="btnEnviarFormulario" className="btn btn-primary"  onClick={enviarActualizar}>ENVIAR</button>
+                                    </div>
                                 </div>
-                                <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-lx-3 col-xxl-3">
-                                    <button id="btnEnviarFormulario" className="btn btn-primary" type="submit" onClick={enviarActualizar}>ENVIAR</button>
-                                </div>
-                            </form> 
+                            </form>
                         </div>
                     </div>
                 </div>
-                <hr/>
+                <hr />
             </Fragment>
         );
-    }else{
+    } else {
         return <Redirect to="/"></Redirect>
-    }  
+    }
 }
 
 export default ListProducts;

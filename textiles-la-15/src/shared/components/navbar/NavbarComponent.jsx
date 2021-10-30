@@ -45,7 +45,7 @@ function NavbarComponent(props) {
                         {isAuthenticated ?<a className="btn btn-primary btn-log" onClick={() => logout({ returnTo: window.location.origin })}>Cerrar Sesión</a> : null}
                     </div>
                     <form class="d-flex">
-                        <button class="btn btn-primary" type="">{isAuthenticated ? user.name : "Usuario"}</button>
+                        <a class="btn btn-primary" type="">{isAuthenticated ? user.name : "Usuario"}</a>
                     </form>
                 </div>
             </nav>
