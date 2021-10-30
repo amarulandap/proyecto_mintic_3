@@ -1,0 +1,17 @@
+.style_form_users {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: #DEB887; 
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.title_form {
+    font-size: 20px;
+    text-align: center;
+}
+
+#return {
+    margin-left: -14px;
+}
