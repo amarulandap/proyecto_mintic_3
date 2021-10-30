@@ -14,7 +14,7 @@ function ListVentas(props) {
     
         setDatos(datosForm);
         const consultarVentas = () => {
-          fetch(`http://localhost:3001/update-ventas/${IDVenta}`, {
+          fetch(`${apiBaseUrl}/update-ventas/${IDVenta}`, {
             method: 'GET', // or 'PUT'
             body: (datosForm), // data can be `string` or {object}!
           })
@@ -27,7 +27,7 @@ function ListVentas(props) {
     const [ventas, setVentas] = useState([]);
     const getVentas = async () => {
         try {
-            const response = await fetch("http://localhost:3001/get-ventas");
+            const response = await fetch(`${apiBaseUrl}/get-ventas`);
             const jsonResponse = await response.json();
             const responseVentas = jsonResponse.data;
             

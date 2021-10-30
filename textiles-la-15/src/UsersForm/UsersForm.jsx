@@ -22,7 +22,7 @@ function UsersForm() {
 
     const getUsers = async () => {
         try {
-            const response = await fetch("http://localhost:3001/get-registers");
+            const response = await fetch(`${apiBaseUrl}/get-registers`);
             const jsonResponse = await response.json();
             const responseUsers = jsonResponse.data;
             const listUsers = responseUsers.map((user) =>
@@ -70,7 +70,7 @@ function UsersForm() {
         }
         setDatos(datosForm);
         const addUsers = () => {
-            fetch("http://localhost:3001/post-register", {
+            fetch(`${apiBaseUrl}/post-register`, {
                 method: 'POST', // or 'PUT'
                 body: JSON.stringify(datosForm), // data can be `string` or {object}!
                 headers: {

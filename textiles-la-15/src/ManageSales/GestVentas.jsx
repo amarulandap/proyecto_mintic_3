@@ -29,7 +29,7 @@ function GestionVent() {
 
     const consultaVentas = async () => {
       try {
-          const response = await fetch(`http://localhost:3001/buscar-idVenta/${idVenta}`);
+          const response = await fetch(`${apiBaseUrl}/buscar-idVenta/${idVenta}`);
           const jsonResponse = await response.json()
           const responseVentas = jsonResponse.data;
           const showVenta = responseVentas.map((venta) =>
@@ -63,7 +63,7 @@ function GestionVent() {
 
     setDatos(datosForm)
     const buscarVentas = () => {
-      fetch(`http://localhost:3001/buscar-idVenta/`, {
+      fetch(`${apiBaseUrl}/buscar-idVenta/`, {
         method: 'GET', // or 'PUT'
         body: JSON.stringify(datosForm), // data can be `string` or {object}!
          headers:{

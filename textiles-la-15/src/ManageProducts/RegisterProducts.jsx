@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import "./RegisterProductsStyles.css";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Redirect } from 'react-router';
+import apiBaseUrl from "../shared/components/utils/api";
 
 
 function RegisterProducts(props) {
@@ -18,7 +19,7 @@ function RegisterProducts(props) {
   const [products, setProducts] = useState([]);
   const getProducts = async () => {
     try {
-      const response = await fetch("http://localhost:3001/get-products");
+      const response = await fetch(`${apiBaseUrl}/get-products`);
       const jsonResponse = await response.json();
       const responseProducts = jsonResponse.data;
       const listProducts = responseProducts.map((product) =>
@@ -55,7 +56,7 @@ function RegisterProducts(props) {
 
     setDatos(datosForm);
     const addProducts = () => {
-      fetch("http://localhost:3001/add-product", {
+      fetch(`${apiBaseUrl}/add-product`, {
         method: 'POST', // or 'PUT'
         body: JSON.stringify(datosForm), // data can be `string` or {object}!
         headers: {

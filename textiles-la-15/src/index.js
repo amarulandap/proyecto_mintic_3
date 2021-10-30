@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from "@auth0/auth0-react";
 
-ReactDOM.render(
+/* ReactDOM.render(
   <Auth0Provider
     domain="dev-np1hq9zr.us.auth0.com"
     clientId="a1LrSDqbUwxtFtyxnOUGnWC2ESgSK3Ig"
@@ -14,6 +14,17 @@ ReactDOM.render(
     <App />
   </Auth0Provider>,
   document.getElementById('root')
+); */
+
+ReactDOM.render(
+  <Auth0Provider
+    domain="dev-zrqqm719.us.auth0.com"
+    clientId="fDN9mWo0wilnCskit47Rz66iYRkWKKa0"
+    redirectUri={window.location.origin}
+  >
+    <App />
+  </Auth0Provider>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

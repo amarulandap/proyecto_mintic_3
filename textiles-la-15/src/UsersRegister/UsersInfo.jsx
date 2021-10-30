@@ -8,7 +8,7 @@ function UsersInfo () {
 
     const getUsers = async () => {
         try {
-            const response = await fetch("http://localhost:3001/get-registers");
+            const response = await fetch(`${apiBaseUrl}/get-registers`);
             const jsonResponse = await response.json();
             const responseUsers = jsonResponse.data;
             const listUsers = responseUsers.map((user) =>

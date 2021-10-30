@@ -25,7 +25,7 @@ function RegisterVentas(props) {
 
     setDatos(datosForm);
     const addVentas = () => {
-      fetch("http://localhost:3001/add-ventas", {
+      fetch(`${apiBaseUrl}/add-ventas`, {
         method: 'POST', // or 'PUT'
         body: JSON.stringify(datosForm), // data can be `string` or {object}!
         headers:{
@@ -43,7 +43,7 @@ function RegisterVentas(props) {
   const [ventas, setVentas] = useState([]);
   const getVentas = async () => {
     try {
-        const response = await fetch("http://localhost:3001/get-ventas");
+        const response = await fetch(`${apiBaseUrl}/get-ventas`);
         const jsonResponse = await response.json();
         const responseVentas = jsonResponse.data;
         const listVentas = responseVentas.map((venta) =>

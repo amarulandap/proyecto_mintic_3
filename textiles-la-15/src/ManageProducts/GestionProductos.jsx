@@ -24,7 +24,7 @@ function ListProducts(props) {
     const [products, setProducts] = useState([]);
     const getProducts = async () => {
         try {
-            const response = await fetch(`http://localhost:3001/search-products?busqueda=${opcion}&valorBusqueda=${valueOpcion}`);
+            const response = await fetch(`${apiBaseUrl}/search-products?busqueda=${opcion}&valorBusqueda=${valueOpcion}`);
             const jsonResponse = await response.json();
             const responseProducts = jsonResponse.data;
             const listProducts = responseProducts.map((product) =>
@@ -61,7 +61,7 @@ function ListProducts(props) {
         }
         setDatos(datosForm);
         const updateUsers = () => {
-            fetch("http://localhost:3001/put-products", {
+            fetch(`${apiBaseUrl}/put-products`, {
                 method: 'PUT', // or 'PUT'
                 body: JSON.stringify(datosForm), // data can be `string` or {object}!
                 headers: {
