@@ -80,6 +80,7 @@ function ListProducts(props) {
                 <div className="container-fluid" id="form-product">
                     <div className="row">
                         <div className="col-6 col-sm-6">
+                            
                             <form className="margen-superior">
                                 <center>
                                     <h1> Consulta de productos </h1>
@@ -133,52 +134,64 @@ function ListProducts(props) {
                                     <h1> Actualización de productos </h1>
                                     <br />
                                 </center>
-                                <div className="row">
-                                    <div className="col-sm-4">
-                                        <label>Id del producto: </label>
-                                    </div>
-                                    <div className="col-sm-8">
-                                        <input type="text" className="actualizadores" name="IdProducto" onChange={(e) => setInputIdProducto(e.target.value)} />
+                                <br />
+                                <div>
+                                    <div className="row">
+                                        <div className="col-sm-4">
+                                            <label>Id del producto: </label>
+                                        </div>
+                                        <div className="col-sm-8">
+                                        <input type="text" className="actualizadores" name="IdProducto" onChange={(e)=>setInputIdProducto(e.target.value)} />
+                                        </div>
                                     </div>
                                 </div>
                                 <br />
-                                <div className="row">
-                                    <div className="col-sm-4">
-                                        <label>Precio del producto: </label>
-                                    </div>
-                                    <div className="col-sm-8">
-                                        <input type="text" className="actualizadores" name="Precio" onChange={(e) => setInputPrecio(e.target.value)} />
-                                    </div>
-                                </div>
-                                <br />
-                                <div className="row">
-                                    <div className="col-sm-4">
-                                        <label>Stock: </label>
-                                    </div>
-                                    <div className="col-sm-8">
-                                        <input type="text" className="actualizadores" name="Stock" onChange={(e) => setInputStock(e.target.value)} />
+                                <div>
+                                    <div className="row">
+                                        <div className="col-sm-4">
+                                            <label>Precio del producto: </label>    
+                                        </div>
+                                            <div className="col-sm-8">
+                                            <input type="text" className="actualizadores" name="Precio" onChange={(e)=>setInputPrecio(e.target.value)} />
+                                            </div>
                                     </div>
                                 </div>
                                 <br />
-                                <div className="row">
-                                    <div className="col-sm-4">
-                                        <label>Fecha de ingreso: </label>
-                                    </div>
-                                    <div className="col-sm-8">
-                                        <input type="date" className="actualizadores" name="FechaIngreso" onChange={(e) => setInputFechaIngreso(e.target.value)} />
+                                <div>
+                                    <div className="row">
+                                        <div className="col-sm-4">
+                                            <label>Stock: </label>
+                                        </div>
+                                        <div className="col-sm-8">
+                                            <input type="text" className="actualizadores" name="Stock" onChange={(e)=>setInputStock(e.target.value)} />
+                                        </div>
                                     </div>
                                 </div>
                                 <br />
-                                <div className="row">
-                                    <div className="col-sm-4">
-                                        <label>Metros por rollo: </label>
+                                <div>
+                                    <div className="row">
+                                        <div className="col-sm-4">
+                                            <label>Fecha de ingreso: </label>
+                                        </div>
+                                        <div className="col-sm-8">
+                                        <input type="date" className="actualizadores" name="FechaIngreso" onChange={(e)=>setInputFechaIngreso(e.target.value)} />
+                                        </div>
                                     </div>
-                                    <div className="col-sm-8">
-                                        <input type ="text" className="actualizadores" name="NumeroRollos" onChange={(e) => setInputNumeroRollos(e.target.value)} />
                                     </div>
-                                    <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-lx-3 col-xxl-3">
-                                    <button id="btnEnviarFormulario" className="btn btn-primary"  onClick={enviarActualizar}>ENVIAR</button>
+                                    <br />
+                                <div>
+                                    <div className="row">
+                                        <div className="col-sm-4">
+                                            <label>Metros por rollo: </label>
+                                        </div>
+                                        <div className="col-sm-8">
+                                        <input type="text" className="actualizadores" name="NumeroRollos" onChange={(e)=>setInputNumeroRollos(e.target.value)} />
+                                        </div>
                                     </div>
+                                </div>
+                                <br />
+                                <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-lx-3 col-xxl-3">
+                                    <button id="btnEnviarFormulario" className="btn btn-primary" type="submit" onClick={enviarActualizar}>ENVIAR</button>
                                 </div>
                             </form>
                         </div>

@@ -85,21 +85,26 @@ return (
 
           
                         
-                        <div class="form-group">
+                        <div class="form-group" className="col-sm-8">
                             <input onChange={(e) => setValorVenta(e.target.value)} type="int" name="ValorVenta" placeholder="Valor de la venta" class="form-control"/>
                         </div>
-                        <div class="form-group">
+                        <br />
+                        <div class="form-group" className="col-sm-8">
                             <input onChange={(e) => setDescripcion(e.target.value)} type="text" name="Descripcion" placeholder="Descripción de la venta" class="form-control"/>
                         </div>
-                        <div class="form-group">
+                        <br />
+                        <div class="form-group" className="col-sm-8">
                             <input onChange={(e) => setFechaVenta(e.target.value)} type="date" name="FechaVenta" placeholder="Fecha de la venta" class="form-control"/>
                         </div>
-                        <div class="form-group">
+                        <br />
+                        <div class="form-group" className="col-sm-8">
                             <input onChange={(e) => setFechaPago(e.target.value)} type="date" name="FechaPago" placeholder="Fecha de pago" class="form-control"/>
                         </div>
-                        <div class="form-group">
+                        <br />
+                        <div class="form-group" className="col-sm-8">
                             <input onChange={(e) => setResponsable(e.target.value)} type="text" name="Responsable" placeholder="Responsable de la venta" class="form-control"/>
                         </div>
+                        <br />
                         <button onClick= {enviar} type= "submit" class="btn btn-primary">Agregar Venta</button>            
             </fieldset>
             </form>
