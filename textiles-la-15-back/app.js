@@ -8,7 +8,12 @@ let connection;
 
 app.use(express.json());
 app.use(cors({origin: true}));
+app.set('port', process.env.PORT || port)
 
+
+app.get("/", (req,res) =>{
+    res.json("Backend Textiles la 15");
+})
 
 /*Endpoint para obtener el listado de todos los usuarios*/
 app.get("/get-registers", async (request,response) => {
