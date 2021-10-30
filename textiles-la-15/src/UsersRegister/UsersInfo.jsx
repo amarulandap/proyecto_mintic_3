@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import './UsersRegisterStyles.css';
+import apiBaseUrl from "../shared/components/utils/api";
 
 function UsersInfo () {
 

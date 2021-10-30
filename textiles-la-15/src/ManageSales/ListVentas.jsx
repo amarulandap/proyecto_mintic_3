@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./RegisterVentasStyles.css";
 import { Link } from "react-router-dom";
+import apiBaseUrl from "../shared/components/utils/api";
 
 function ListVentas(props) {
 

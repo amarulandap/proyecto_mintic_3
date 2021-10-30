@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import "./UsersRegister";
 import { Link } from 'react-router-dom';
+import apiBaseUrl from "../shared/components/utils/api";
 
 
 function UsersUpdate (){
@@ -14,7 +15,7 @@ function UsersUpdate (){
 
     const getUsers = async () => {
         try {
-            const response = await fetch("http://localhost:3001/get-registers");
+            const response = await fetch(`${apiBaseUrl}/get-registers`);
             const jsonResponse = await response.json();
             const responseUsers = jsonResponse.data;
             const listUsers = responseUsers.map((user) =>
@@ -52,7 +53,7 @@ function UsersUpdate (){
         }
         setDatos(datosForm);
         const deleteUsers = () => {
-            fetch("http://localhost:3001/delete-register", {
+            fetch(`${apiBaseUrl}/delete-register`, {
                 method: 'DELETE', // or 'PUT'
                 body: JSON.stringify(datosForm), // data can be `string` or {object}!
                 headers: {
@@ -72,7 +73,7 @@ function UsersUpdate (){
         }
         setDatos(datosForm);
         const updateUsers = () => {
-            fetch("http://localhost:3001/put-register", {
+            fetch(`${apiBaseUrl}/put-register`, {
                 method: 'PUT', // or 'PUT'
                 body: JSON.stringify(datosForm), // data can be `string` or {object}!
                 headers: {
